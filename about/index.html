@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -445,7 +446,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-06-02
+                    2021-06-03
                 </div>
                 
 
@@ -475,6 +476,62 @@
 <li>email：<a href="mailto:2647716549@qq.com">2647716549@qq.com</a></li>
 <li>major：数据开发工程师</li>
 </ul>
+<h1 id="大数据技能使用情况"><a href="#大数据技能使用情况" class="headerlink" title="大数据技能使用情况"></a>大数据技能使用情况</h1><div style="width: 90%;margin: 0 auto">
+    <canvas id="chart943" style="height: 300px"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script type="text/javascript">
+    var ctx = document.getElementById('chart943').getContext('2d');
+    var options = {
+    "type":"bar",
+    "data":{
+        "labels":["Java","Hadoop","sqoop","mysql","hbase","Spark","Flink"],
+        "datasets":[{
+        "label":"技能图表",
+        "data":[65,70,80,81,56,55,80],
+        "fill":false,
+        "backgroundColor":["rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(255, 205, 86, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(201, 203, 207, 0.2)"],
+        "borderColor":["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(255, 205, 86)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(201, 203, 207)"],
+        "borderWidth":1
+                     }]
+            },
+    "options":{
+        "scales":{
+            "yAxes":[{
+                "ticks":{
+                    "beginAtZero":true
+                        }
+                    }]
+               }
+            }
+};
+    new Chart(ctx, options);
+</script>
+
+
+
+<h1 id="从事方向"><a href="#从事方向" class="headerlink" title="从事方向"></a>从事方向</h1><div style="width: 90%;margin: 0 auto">
+    <canvas id="chart5728" style="height: 300px"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script type="text/javascript">
+    var ctx = document.getElementById('chart5728').getContext('2d');
+    var options = {
+    "type":"pie",
+    "data":{
+        "labels":["数仓开发","产品经理","数据开发"],
+        "datasets":[
+            {
+                "label":"My First Dataset",
+                "data":[300,50,200],
+                "backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]
+            }
+        ]
+    }
+};
+    new Chart(ctx, options);
+</script>
+
 
                 
             </div>
@@ -728,7 +785,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-03
                             </span>
                         <span class="publish-author">
                             
@@ -766,7 +823,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-03
                             </span>
                         <span class="publish-author">
                             
@@ -934,7 +991,7 @@
                    type="playlist"
                    id="436514312"
                    fixed='true'
-                   autoplay='true'
+                   autoplay='false'
                    theme='#42b983'
                    loop='all'
                    order='random'
