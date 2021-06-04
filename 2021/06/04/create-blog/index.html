@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hh, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="create_blog, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hh | 情深骚明&amp;博客</title>
+    <title>create_blog | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hh</h1>
+                    <h1 class="description center-align post-title">create_blog</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">
-                                <span class="chip bg-color">大数据</span>
+                            <a href="/tags/Github/">
+                                <span class="chip bg-color">Github</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
-                                大数据
+                            <a href="/categories/Github/" class="post-category">
+                                Github
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-06-03
+                    2021-06-04
                 </div>
                 
 
@@ -480,10 +480,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h1><ul>
-<li>email：<a href="mailto:2647716549@qq.com">2647716549@qq.com</a></li>
-<li>major：数据开发工程师</li>
-</ul>
+                <h1 id="如何去创建一个Github-Page"><a href="#如何去创建一个Github-Page" class="headerlink" title="如何去创建一个Github Page"></a>如何去创建一个Github Page</h1><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">首先默认大家都是安装好了。</span></span><br><span class="line"><span class="attr">1.安装Git</span></span><br><span class="line"><span class="attr">2.安装Node.js</span></span><br><span class="line"><span class="attr">3.安装Hexo</span></span><br><span class="line"><span class="attr">4.GitHub创建个人仓库</span></span><br><span class="line"><span class="attr">5.生成SSH添加到GitHub</span></span><br><span class="line"><span class="attr">6.将hexo部署到GitHub</span></span><br><span class="line"><span class="attr">7.设置个人域名</span></span><br><span class="line"><span class="attr">8.发布文章</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><em><strong>测试是否成功</strong></em></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ssh</span> <span class="string">-T git@github.com</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><em><strong>下载主题</strong></em></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">git</span> <span class="string">clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><em><strong>修改配置</strong></em></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme</span>: <span class="string">yilia</span></span><br><span class="line"><span class="attr">deploy</span>:<span class="string"></span></span><br><span class="line">  <span class="attr">type</span>: <span class="string">git</span></span><br><span class="line">  <span class="attr">repository</span>: <span class="string">git@github.com:wmyBigdata-2/wmyBigdata-2.github.io.git</span></span><br><span class="line">  <span class="attr">branch</span>: <span class="string">yilia</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><em><strong>执行命令</strong></em></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hexo</span> <span class="string">clean</span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">g</span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">s</span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">d</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><em><strong>结果展示</strong></em></p>
+<p><img src="/2021/06/04/create-blog/image-20210604221859683.png" alt="image-20210604221859683"></p>
+<p><em><strong>思考题？？？</strong></em></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">这个是主题是可以随意更改的，我目前在使用的是matery这个主题，我特别喜欢这个主题的，可能这个主题的代码快哪里有点乱，但是还好，总得来说，我是非常喜欢的</span></span><br></pre></td></tr></tbody></table></figure>
+
 
                 
             </div>
@@ -510,7 +525,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/03/hh/">http://example.com/2021/06/03/hh/</a>
+                    <a href="http://example.com/2021/06/04/create-blog/">http://example.com/2021/06/04/create-blog/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,8 +563,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">
-                                    <span class="chip bg-color">大数据</span>
+                                <a href="/tags/Github/">
+                                    <span class="chip bg-color">Github</span>
                                 </a>
                             
                         </div>
@@ -723,6 +738,43 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
+                <a href="/2021/06/04/ceshi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="ceshi">
+                        
+                        <span class="card-title">ceshi</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            情深骚明
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2021/06/03/hello-world/">
                     <div class="card-image">
                         
@@ -739,9 +791,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -759,56 +811,6 @@
                     
                     <a href="/tags/Spark/">
                         <span class="chip bg-color">Spark</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/06/03/hh/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="hh">
-                        
-                        <span class="card-title">hh</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-03
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
-                                    大数据
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">
-                        <span class="chip bg-color">大数据</span>
                     </a>
                     
                 </div>
