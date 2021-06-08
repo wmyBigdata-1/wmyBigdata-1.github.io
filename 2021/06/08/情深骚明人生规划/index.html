@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DWD层数据分析, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="情深骚明人生规划, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DWD层数据分析 | 情深骚明&amp;博客</title>
+    <title>情深骚明人生规划 | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DWD层数据分析</h1>
+                    <h1 class="description center-align post-title">情深骚明人生规划</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%A1%B9%E7%9B%AE/">
-                                <span class="chip bg-color">项目</span>
+                            <a href="/tags/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">人生规划</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category">
-                                项目
+                            <a href="/categories/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/" class="post-category">
+                                人生规划
                             </a>
                         
                     </div>
@@ -480,53 +480,50 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DWD层数据分析"><a href="#DWD层数据分析" class="headerlink" title="DWD层数据分析"></a>DWD层数据分析</h1><p><img src="/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/image-20210608074951312.png" alt="DWD规划表"></p>
-<h2 id="退款事实表-事务性事实表"><a href="#退款事实表-事务性事实表" class="headerlink" title="退款事实表-事务性事实表"></a>退款事实表-事务性事实表</h2><h3 id="建表语句"><a href="#建表语句" class="headerlink" title="建表语句"></a>建表语句</h3><p>维度：用户、时间、商品、地区</p>
-<p>度量值：退款件数、退款金额</p>
-<p>其它字段：退款原因类型、退款时间</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> if <span class="keyword">exists</span> dwd_fact_order_refund_info;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">external</span> <span class="keyword">table</span> dwd_fact_order_refund_info(</span><br><span class="line">    `id` string COMMENT <span class="string">'编号'</span>,</span><br><span class="line">    `user_id` string COMMENT <span class="string">'用户ID'</span>,</span><br><span class="line">    `order_id` string COMMENT <span class="string">'订单ID'</span>,</span><br><span class="line">    `sku_id` string COMMENT <span class="string">'商品ID'</span>,</span><br><span class="line">    `refund_type` string COMMENT <span class="string">'退款类型'</span>,</span><br><span class="line">    `refund_num` <span class="type">bigint</span> COMMENT <span class="string">'退款件数'</span>,</span><br><span class="line">    `refund_amount` <span class="type">decimal</span>(<span class="number">16</span>,<span class="number">2</span>) COMMENT <span class="string">'退款金额'</span>,</span><br><span class="line">    `refund_reason_type` string COMMENT <span class="string">'退款原因类型'</span>,</span><br><span class="line">    `create_time` string COMMENT <span class="string">'退款时间'</span></span><br><span class="line">) COMMENT <span class="string">'退款事实表'</span></span><br><span class="line">PARTITIONED <span class="keyword">BY</span> (`dt` string)</span><br><span class="line">stored <span class="keyword">as</span> parquet</span><br><span class="line">location <span class="string">'/user/hive/warehouse/gmall.db/dwd/dwd_fact_order_refund_info/'</span></span><br><span class="line">tblproperties ("parquet.compression"<span class="operator">=</span>"lzo");</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这里面的字段全部都是来自于ods_order_refund_info这张表。。。</p>
-<h3 id="加载数据"><a href="#加载数据" class="headerlink" title="加载数据"></a>加载数据</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> hive.input.format<span class="operator">=</span>org.apache.hadoop.hive.ql.io.HiveInputFormat;</span><br><span class="line"><span class="keyword">insert</span> overwrite <span class="keyword">table</span> dwd_fact_order_refund_info <span class="keyword">partition</span>(dt<span class="operator">=</span><span class="string">'2020-06-14'</span>)</span><br><span class="line"><span class="keyword">select</span></span><br><span class="line">    id,</span><br><span class="line">    user_id,</span><br><span class="line">    order_id,</span><br><span class="line">    sku_id,</span><br><span class="line">    refund_type,</span><br><span class="line">    refund_num,</span><br><span class="line">    refund_amount,</span><br><span class="line">    refund_reason_type,</span><br><span class="line">    create_time</span><br><span class="line"><span class="keyword">from</span> ods_order_refund_info</span><br><span class="line"><span class="keyword">where</span> dt<span class="operator">=</span><span class="string">'2020-06-14'</span>;</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h3><p><img src="/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/image-20210608073251401.png" alt="退款事实表"></p>
-<h2 id="评价事实表-事务性事实表"><a href="#评价事实表-事务性事实表" class="headerlink" title="评价事实表-事务性事实表"></a>评价事实表-事务性事实表</h2><p>把ODS层ods_comment_info表中的数据导入到DWD层评价事实表，在导入的过程中做适当的清洗。。。</p>
-<p>维度：时间、用户、商品、地区、……</p>
-<p>度量：商品个数</p>
-<p>评价记录，order_id,order_info，join的时间，ODS层，不能直接join当天的分区，评价的订单，不是当天的订单，有可能是评价不上的，退款是可以，订单周期中的一部分</p>
-<p>评价的话，状态是不发生变化的。</p>
-<p>如果非得加上区域，join 当天得不行，join全表肯定是 可以得，那么应该怎么办勒。评价得订单最多是在15天完成得，从今天往前数15天来进行join，主要是复杂得业务逻辑，SQL不难。。。</p>
-<p>如果没有明显得度量值得话，可以使用隐含得度量值，行数和次数。。。</p>
-<h3 id="建表语句-1"><a href="#建表语句-1" class="headerlink" title="建表语句"></a>建表语句</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> if <span class="keyword">exists</span> dwd_fact_comment_info;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">external</span> <span class="keyword">table</span> dwd_fact_comment_info(</span><br><span class="line">    `id` string COMMENT <span class="string">'编号'</span>,</span><br><span class="line">    `user_id` string COMMENT <span class="string">'用户ID'</span>,</span><br><span class="line">    `sku_id` string COMMENT <span class="string">'商品sku'</span>,</span><br><span class="line">    `spu_id` string COMMENT <span class="string">'商品spu'</span>,</span><br><span class="line">    `order_id` string COMMENT <span class="string">'订单ID'</span>,</span><br><span class="line">    `appraise` string COMMENT <span class="string">'评价'</span>,</span><br><span class="line">    `create_time` string COMMENT <span class="string">'评价时间'</span></span><br><span class="line">) COMMENT <span class="string">'评价事实表'</span></span><br><span class="line">PARTITIONED <span class="keyword">BY</span> (`dt` string)</span><br><span class="line">stored <span class="keyword">as</span> parquet</span><br><span class="line">location <span class="string">'/user/hive/warehouse/gmall.db/dwd/dwd_fact_comment_info/'</span></span><br><span class="line">tblproperties ("parquet.compression"<span class="operator">=</span>"lzo");</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="加载数据-1"><a href="#加载数据-1" class="headerlink" title="加载数据"></a>加载数据</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> hive.input.format<span class="operator">=</span>org.apache.hadoop.hive.ql.io.HiveInputFormat;</span><br><span class="line"><span class="keyword">insert</span> overwrite <span class="keyword">table</span> dwd_fact_comment_info <span class="keyword">partition</span>(dt<span class="operator">=</span><span class="string">'2020-06-14'</span>)</span><br><span class="line"><span class="keyword">select</span></span><br><span class="line">    id,</span><br><span class="line">    user_id,</span><br><span class="line">    sku_id,</span><br><span class="line">    spu_id,</span><br><span class="line">    order_id,</span><br><span class="line">    appraise,</span><br><span class="line">    create_time</span><br><span class="line"><span class="keyword">from</span> ods_comment_info</span><br><span class="line"><span class="keyword">where</span> dt<span class="operator">=</span><span class="string">'2020-06-14'</span>;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="查询数据-1"><a href="#查询数据-1" class="headerlink" title="查询数据"></a>查询数据</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> dwd_fact_comment_info;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/image-20210608074441822.png" alt="评价事实表"></p>
-<h2 id="订单明细事实表-事务性事实表"><a href="#订单明细事实表-事务性事实表" class="headerlink" title="订单明细事实表-事务性事实表"></a>订单明细事实表-事务性事实表</h2><p>维度：时间、用户、地区、商品</p>
-<p>度量值：商品的件数、（商品单价和商品件数）</p>
-<h3 id="建表语句-2"><a href="#建表语句-2" class="headerlink" title="建表语句"></a>建表语句</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> if <span class="keyword">exists</span> dwd_fact_order_detail;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">external</span> <span class="keyword">table</span> dwd_fact_order_detail (</span><br><span class="line">    `id` string COMMENT <span class="string">'订单编号'</span>,</span><br><span class="line">    `order_id` string COMMENT <span class="string">'订单号'</span>,</span><br><span class="line">    `user_id` string COMMENT <span class="string">'用户id'</span>,</span><br><span class="line">    `sku_id` string COMMENT <span class="string">'sku商品id'</span>,</span><br><span class="line">    `sku_name` string COMMENT <span class="string">'商品名称'</span>,</span><br><span class="line">    `order_price` <span class="type">decimal</span>(<span class="number">16</span>,<span class="number">2</span>) COMMENT <span class="string">'商品价格'</span>,</span><br><span class="line">    `sku_num` <span class="type">bigint</span> COMMENT <span class="string">'商品数量'</span>,</span><br><span class="line">    `create_time` string COMMENT <span class="string">'创建时间'</span>,</span><br><span class="line">    `province_id` string COMMENT <span class="string">'省份ID'</span>,</span><br><span class="line">    `source_type` string COMMENT <span class="string">'来源类型'</span>,</span><br><span class="line">    `source_id` string COMMENT <span class="string">'来源编号'</span>,</span><br><span class="line">    `original_amount_d` <span class="type">decimal</span>(<span class="number">20</span>,<span class="number">2</span>) COMMENT <span class="string">'原始价格分摊'</span>,</span><br><span class="line">    `final_amount_d` <span class="type">decimal</span>(<span class="number">20</span>,<span class="number">2</span>) COMMENT <span class="string">'购买价格分摊'</span>,</span><br><span class="line">    `feight_fee_d` <span class="type">decimal</span>(<span class="number">20</span>,<span class="number">2</span>) COMMENT <span class="string">'分摊运费'</span>,</span><br><span class="line">    `benefit_reduce_amount_d` <span class="type">decimal</span>(<span class="number">20</span>,<span class="number">2</span>) COMMENT <span class="string">'分摊优惠'</span></span><br><span class="line">) COMMENT <span class="string">'订单明细事实表表'</span></span><br><span class="line">PARTITIONED <span class="keyword">BY</span> (`dt` string)</span><br><span class="line">stored <span class="keyword">as</span> parquet</span><br><span class="line">location <span class="string">'/user/hive/warehouse/gmall.db/dwd/dwd_fact_order_detail'</span></span><br><span class="line">tblproperties ("parquet.compression"<span class="operator">=</span>"lzo");</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="加载数据-2"><a href="#加载数据-2" class="headerlink" title="加载数据"></a>加载数据</h3><p>难点就是在分摊金额。。。original_amount_d、final_amount_d、feight_fee_d、benefit_reduce_amount_d通过join操作，join之后通过计算就行。。。</p>
-<p>四舍五入的话得考虑精度得问题，不能整除得问题，逻辑上应该怎么去处理，先把误差给找出勒，总得优惠-分摊之后的误差，在从分摊中的商品任意一个加上就可以了。。。</p>
-<p>使用开窗函数 </p>
-<p>sum() over</p>
-<p>记住，不要加order by 因为影响开窗的范围， 3.33 6.66 9.99 所以一定要注意业务场景</p>
-<p>优惠金额-分摊金额+1</p>
-<p>row_number()</p>
-<p><img src="/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/image-20210608083533575.png" alt="误差分析"></p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> hive.input.format<span class="operator">=</span>org.apache.hadoop.hive.ql.io.HiveInputFormat;</span><br><span class="line"><span class="keyword">insert</span> overwrite <span class="keyword">table</span> dwd_fact_order_detail <span class="keyword">partition</span>(dt<span class="operator">=</span><span class="string">'2020-06-14'</span>)</span><br><span class="line"><span class="keyword">select</span></span><br><span class="line">    id,</span><br><span class="line">    order_id,</span><br><span class="line">    user_id,</span><br><span class="line">    sku_id,</span><br><span class="line">    sku_name,</span><br><span class="line">    order_price,</span><br><span class="line">    sku_num,</span><br><span class="line">    create_time,</span><br><span class="line">    province_id,</span><br><span class="line">    source_type,</span><br><span class="line">    source_id,</span><br><span class="line">    original_amount_d,</span><br><span class="line">    if(rn<span class="operator">=</span><span class="number">1</span>,final_total_amount <span class="operator">-</span>(sum_div_final_amount <span class="operator">-</span> final_amount_d),final_amount_d),</span><br><span class="line">    if(rn<span class="operator">=</span><span class="number">1</span>,feight_fee <span class="operator">-</span> (sum_div_feight_fee <span class="operator">-</span> feight_fee_d),feight_fee_d),</span><br><span class="line">    if(rn<span class="operator">=</span><span class="number">1</span>,benefit_reduce_amount <span class="operator">-</span> (sum_div_benefit_reduce_amount <span class="operator">-</span>benefit_reduce_amount_d), benefit_reduce_amount_d)</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">(</span><br><span class="line">    <span class="keyword">select</span></span><br><span class="line">        od.id,</span><br><span class="line">        od.order_id,</span><br><span class="line">        od.user_id,</span><br><span class="line">        od.sku_id,</span><br><span class="line">        od.sku_name,</span><br><span class="line">        od.order_price,</span><br><span class="line">        od.sku_num,</span><br><span class="line">        od.create_time,</span><br><span class="line">        oi.province_id,</span><br><span class="line">        od.source_type,</span><br><span class="line">        od.source_id,</span><br><span class="line">        round(od.order_price<span class="operator">*</span>od.sku_num,<span class="number">2</span>) original_amount_d,</span><br><span class="line">        round(od.order_price<span class="operator">*</span>od.sku_num<span class="operator">/</span>oi.original_total_amount<span class="operator">*</span>oi.final_total_amount,<span class="number">2</span>) final_amount_d,</span><br><span class="line">        round(od.order_price<span class="operator">*</span>od.sku_num<span class="operator">/</span>oi.original_total_amount<span class="operator">*</span>oi.feight_fee,<span class="number">2</span>) feight_fee_d,</span><br><span class="line">        round(od.order_price<span class="operator">*</span>od.sku_num<span class="operator">/</span>oi.original_total_amount<span class="operator">*</span>oi.benefit_reduce_amount,<span class="number">2</span>) benefit_reduce_amount_d,</span><br><span class="line">        <span class="built_in">row_number</span>() <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> od.order_id <span class="keyword">order</span> <span class="keyword">by</span> od.id <span class="keyword">desc</span>) rn,</span><br><span class="line">        oi.final_total_amount,</span><br><span class="line">        oi.feight_fee,</span><br><span class="line">        oi.benefit_reduce_amount,</span><br><span class="line">        <span class="built_in">sum</span>(round(od.order_price<span class="operator">*</span>od.sku_num<span class="operator">/</span>oi.original_total_amount<span class="operator">*</span>oi.final_total_amount,<span class="number">2</span>)) <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> od.order_id) sum_div_final_amount,</span><br><span class="line">        <span class="built_in">sum</span>(round(od.order_price<span class="operator">*</span>od.sku_num<span class="operator">/</span>oi.original_total_amount<span class="operator">*</span>oi.feight_fee,<span class="number">2</span>)) <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> od.order_id) sum_div_feight_fee,</span><br><span class="line">        <span class="built_in">sum</span>(round(od.order_price<span class="operator">*</span>od.sku_num<span class="operator">/</span>oi.original_total_amount<span class="operator">*</span>oi.benefit_reduce_amount,<span class="number">2</span>)) <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> od.order_id) sum_div_benefit_reduce_amount</span><br><span class="line">    <span class="keyword">from</span></span><br><span class="line">    (</span><br><span class="line">        <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> ods_order_detail <span class="keyword">where</span> dt<span class="operator">=</span><span class="string">'2020-06-14'</span></span><br><span class="line">    ) od</span><br><span class="line">    <span class="keyword">join</span></span><br><span class="line">    (</span><br><span class="line">        <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> ods_order_info <span class="keyword">where</span> dt<span class="operator">=</span><span class="string">'2020-06-14'</span></span><br><span class="line">    ) oi</span><br><span class="line">    <span class="keyword">on</span> od.order_id<span class="operator">=</span>oi.id</span><br><span class="line">)t1;</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="查询数据-2"><a href="#查询数据-2" class="headerlink" title="查询数据"></a>查询数据</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> dwd_fact_order_detail <span class="keyword">where</span> dt<span class="operator">=</span><span class="string">'2020-06-14'</span> limit <span class="number">2</span>;</span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/image-20210608090619504.png" alt="订单明细事实表"></p>
+                <h1 id="人生规划"><a href="#人生规划" class="headerlink" title="人生规划"></a>人生规划</h1><h2 id="不偏离"><a href="#不偏离" class="headerlink" title="不偏离"></a>不偏离</h2><p>让自己告别瞎忙，围绕目标稳步前进。。。</p>
+<p>【自然式思考】和【焦虑收集箱】解决80%的焦虑。。。</p>
+<p>如何去解决20%的问题。。。</p>
+<p>很多人在入睡的时候，都会想我明天是不是约了什么人，我明天还有什么会，是不是又什么资料别人应该给我了。。。</p>
+<p>可总也想不起来，最终很纠结的入睡了。。。</p>
+<h3 id="如何搭建系统"><a href="#如何搭建系统" class="headerlink" title="如何搭建系统"></a>如何搭建系统</h3><p>搭建一个良好的系统之后，有条不紊的去解决所有问题，才会又更多的时间探索自己想要什么？？？</p>
+<p>做自己人生的领导师。</p>
+<ol>
+<li><p>今日必达</p>
+<p>就是不做后果非常严重，做今天最重要的三件事情，给任务设置一个完成日期，</p>
+</li>
+<li><p>日程表</p>
+<p>明确规定自己的时间节点任务</p>
+</li>
+<li><p>下一步行动</p>
+<p>不设置时间的行动</p>
+</li>
+<li><p>回收</p>
+<p>别人要给自己的结果的任务就放到了这里</p>
+</li>
+<li><p>释放</p>
+<p>安排别人所做的任务 —&gt; 做一个PPT</p>
+</li>
+</ol>
+<h4 id="今日必达"><a href="#今日必达" class="headerlink" title="今日必达"></a>今日必达</h4><p>紧急事务 — 今天最重要的三件事情</p>
+<p>不做，后果就立马特别严重的紧急事务 — 立马做 — 生死线</p>
+<p>今天做完的事情，就没有必要卡死时间，加班也要完成就好了。。。</p>
+<p>例如：开终结会、交课件、给实习签合同。</p>
+<p>学会取舍，是工作高效的第一步，不需要设置完成时间，降低工资压力。。。</p>
+<h4 id="日程表"><a href="#日程表" class="headerlink" title="日程表"></a>日程表</h4><p>安排每个时间段要做的事情，但是时间点不能固定，因为日程表不仅仅是工作会议或者说是约会，睡觉，吃饭</p>
+<p>工作会议太密集，太满，降低自己的应变能力，学习最好的不是上课最多的人，同时加班最多的不是业绩最好的人。</p>
+<p>学会取舍，全心全意，要从更本上解决低效的会赶会的问题</p>
+<h4 id="下一步行动"><a href="#下一步行动" class="headerlink" title="下一步行动"></a>下一步行动</h4><ul>
+<li>看一部电影</li>
+<li>吃个饭，写个博客</li>
+<li>思考日，周，月，季度，年规划</li>
+</ul>
+<p>不急于做完，不要和今日必做和日常表，所以维度退化，一定要注意。。。</p>
+<p>消磨时间 — 完成任务</p>
+<h4 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h4><p>抽出时间，深度思考，不要用战术性的勤奋，外包，专业的人做专业的事情，在空余时间提升自己。</p>
+<h4 id="回收和释放"><a href="#回收和释放" class="headerlink" title="回收和释放"></a>回收和释放</h4><p>对等关系，明确时间，对确定性问题非常明确，安排任务和确定任务。</p>
+<p>理想状态，回收代表具体任务</p>
+<p>规划日常、今日必达、回归和释放终结，尽可能不要使自己压力太大。</p>
+<p>原则：</p>
 
                 
             </div>
@@ -543,7 +540,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">情深</a>
+                    <a href="/about" rel="external nofollow noreferrer">情深骚明</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -553,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">http://example.com/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</a>
+                    <a href="http://example.com/2021/06/08/%E6%83%85%E6%B7%B1%E9%AA%9A%E6%98%8E%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/">http://example.com/2021/06/08/%E6%83%85%E6%B7%B1%E9%AA%9A%E6%98%8E%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,7 +563,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">情深</a>
+                    <a href="/about" target="_blank">情深骚明</a>
                     !
                 </span>
             </div>
@@ -591,8 +588,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%A1%B9%E7%9B%AE/">
-                                    <span class="chip bg-color">项目</span>
+                                <a href="/tags/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">人生规划</span>
                                 </a>
                             
                         </div>
@@ -762,9 +759,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/06/08/%E6%83%85%E6%B7%B1%E9%AA%9A%E6%98%8E%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/">
                     <div class="card-image">
@@ -782,9 +780,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -797,6 +795,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -815,13 +814,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/04/%E5%AE%9E%E4%B9%A0%E9%94%99%E8%AF%AF%E5%BD%92%E7%BA%B3/">
+                <a href="/2021/06/08/DWD%E5%B1%82%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="实习错误归纳">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="DWD层数据分析">
                         
-                        <span class="card-title">实习错误归纳</span>
+                        <span class="card-title">DWD层数据分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -832,14 +831,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AE%9E%E4%B9%A0/" class="post-category">
-                                    实习
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category">
+                                    项目
                                 </a>
                             
                             
@@ -849,8 +848,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AE%9E%E4%B9%A0/">
-                        <span class="chip bg-color">实习</span>
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">项目</span>
                     </a>
                     
                 </div>
