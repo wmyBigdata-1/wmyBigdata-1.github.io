@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="kafka-data-log-split, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="kafka-data-log-split.md, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>kafka-data-log-split | 情深骚明&amp;博客</title>
+    <title>kafka-data-log-split.md | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">kafka-data-log-split</h1>
+                    <h1 class="description center-align post-title">kafka-data-log-split.md</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/kafka/">
+                                <span class="chip bg-color">kafka</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/kafka/" class="post-category">
+                                kafka
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -467,7 +480,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>kafka</p>
+<h1 id="情深骚明前序"><a href="#情深骚明前序" class="headerlink" title="情深骚明前序"></a>情深骚明前序</h1><p>大家好，很高兴，有可以给大家分享自己的学习心得了，我原来实习的岗位是大数据开发组，后来我申请调到了实时组，可是我发现到实时组来，我们大多数情况下都是干的是运维的操作，除了做些一些规则的匹配，看Web UI的任务调度情况，偶尔还会参加一些取数的需求。希望在后面能给大家分享和自己在平时工作和学习中所遇到的问题，我都会分享到这个平台上，供自己日后进行一个统计学习。</p>
+<h1 id="Kafka集群挂掉问题"><a href="#Kafka集群挂掉问题" class="headerlink" title="Kafka集群挂掉问题"></a>Kafka集群挂掉问题</h1><p>相信大家也会遇到，就是我们可能因为某种异常的情况退出，导致Kafka集群突然挂掉了，可能我刚刚学习，集群里面没有太多的资源，所以我一般都会选择把集群给停掉，然后删掉Zookeeper里面的zookeeper-server.pid和kafka里面的logs目录，然后进行重启操作。这样做的目的其实也就是类似于集群格式化。。。</p>
+<p>如果后面我遇到很多问题，都会不断的去更新。。。</p>
+<h1 id="Kafka-数据和日志分离"><a href="#Kafka-数据和日志分离" class="headerlink" title="Kafka 数据和日志分离"></a>Kafka 数据和日志分离</h1><p>我们在搭建集群的时候，日志和数据最后是分离开来，这样的话方便我们自己的管理，我一般都会在Kafka安装的根目录下面创建一个Data,默认的话有也给logs，里面分别存储的是数据和日志。</p>
+<p>可以看看我的集群情况。。。</p>
+<p><img src="/2021/06/18/kafka-data-log-split/image-20210618175731196.png" alt="Kakfa数据和日志分离"></p>
+<p>需要配置的参数有：</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注释：A comma separated list of directories under which to store log files</span></span><br><span class="line"><span class="meta">log.dirs</span>=<span class="string">/opt/module/kafka_2.11/data</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其实看到 log.dirs 大家都会认为这个是存储的日志的数据，其实不然，如果我们配置logs的话，数据和日志都会放在一个文件夹中，这样是不太能够更好的进行数据维护管理。</p>
+<p>如果我们不去创建logs的话，Kafka集群都会去默认的创建logs，所以我们不需要太去注意这个。</p>
+<p>如果不是刚开始就弄这个数据和日志分离的话，我们可以按照集群格式化的方式进行数据分离的配置。</p>
+<p>但是我们可以在设置的时候可以首先做一个数据备份的操作。</p>
+<p>作为IT行业，每天我强调自己的就是，我在干什么，我是不是在操作数据，我一定要做数据备份，否则如果造成数据灾难，那将会是一个非常麻烦的一件事情。。。</p>
+<h1 id="Kafka-Topic"><a href="#Kafka-Topic" class="headerlink" title="Kafka Topic"></a>Kafka Topic</h1><p>我们在创建Topic的时候，最好是创建3个分区，我们可以去看看我们在写入数据的时候，其实他默认的是一个HashPartition，做一个轮询的方式，使得数据得到一个负载均衡得目的。</p>
+<h1 id="Kafka-使用脚本"><a href="#Kafka-使用脚本" class="headerlink" title="Kafka 使用脚本"></a>Kafka 使用脚本</h1><p>我在操作Kafka得时候，其实会写很多脚本，加快我自己得开发速度，因为操作Kafka会写太多得脚本命令，如果我把这个给进行一个归纳得话，将会极大情况下减少我工作得压力。所以通过这件事情，让我明白了脚本开发其实是一个不错的选择，给自己减轻压力。</p>
+<p>网络上不是流行一句话就是高级的程序员往往是采用最简单得编程方式：Ctrl + V /  C </p>
+<p>其实他们擅长总结，擅长归纳，这样他们在面对相同业务场景得时候就可以拿出来直接进行使用了。</p>
+<p>所以这种方式希望能够自己在其中获得更直观得效益。</p>
+<p>祝我自己得实习生涯会有不一样得天地。。。。</p>
+
                 
             </div>
             <hr/>
@@ -530,7 +564,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/kafka/">
+                                    <span class="chip bg-color">kafka</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -698,48 +736,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
-            <div class="card">
-                <a href="/2021/06/18/kafka-data-log-split/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="kafka-data-log-split">
-                        
-                        <span class="card-title">kafka-data-log-split</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            情深骚明
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
                 <a href="/2021/06/18/%E5%8D%9A%E5%AE%A2%E7%99%BB%E5%BD%95%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
@@ -757,9 +756,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -767,6 +766,55 @@
                             
                         </span>
                     </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/08/%E6%83%85%E6%B7%B1%E9%AA%9A%E6%98%8E%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="情深骚明人生规划">
+                        
+                        <span class="card-title">情深骚明人生规划</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/" class="post-category">
+                                    人生规划
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BA%BA%E7%94%9F%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">人生规划</span>
+                    </a>
+                    
                 </div>
                 
             </div>
