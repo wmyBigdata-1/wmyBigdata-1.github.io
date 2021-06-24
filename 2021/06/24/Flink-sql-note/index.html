@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Flink1.3.0-intergation-hive3.1.2, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="Flink-sql-note, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Flink1.3.0-intergation-hive3.1.2 | 情深骚明&amp;博客</title>
+    <title>Flink-sql-note | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,7 +318,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Flink1.3.0-intergation-hive3.1.2</h1>
+                    <h1 class="description center-align post-title">Flink-sql-note</h1>
                 </div>
             </div>
         </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-06-23
+                    2021-06-24
                 </div>
                 
 
@@ -480,56 +480,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Flink开发"><a href="#Flink开发" class="headerlink" title="Flink开发"></a>Flink开发</h1><p>我相信大家学过很多框架得类SQL，其实有时候我们会面临实时的需求，需要借助于Flink框架来进行完成，所以这个的话就面临来如何来搭建flink集成hive勒。</p>
-<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><ul>
-<li>flink 1.3.0</li>
-<li>hive 3.1.2</li>
-<li>hadoop 3.1.3</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jmx-bigdata/p/14238169.html">参考搭建</a></p>
-<p>说明：我首先使用的是Standalone的方式来 进行测试的。。。</p>
-<h2 id="依赖准备"><a href="#依赖准备" class="headerlink" title="依赖准备"></a>依赖准备</h2><p><a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/org/apache/flink/flink-connector-hive_2.11/">flink连接hive所需要的依赖</a></p>
-<p>flink-connector-hive_2.11-1.11.3.jar</p>
-<p><img src="/2021/06/23/Flink1-3-0-intergation-hive3-1-2/image-20210623162204059.png" alt="下载这个这个jar"></p>
-<p>下载maven官网种下载hive-exec</p>
-<p><img src="/2021/06/23/Flink1-3-0-intergation-hive3-1-2/image-20210623162416000.png" alt="maven官网下载exec"></p>
-<p>hive-exec-3.1.2.jar</p>
-<p>所有的资料都是从<a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/org/apache/flink/%E9%87%8C%E9%9D%A2%E4%B8%8B%E8%BD%BD%E7%9A%84">https://repo1.maven.org/maven2/org/apache/flink/里面下载的</a></p>
-<p><a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-hive-3.1.2_2.11/">https://repo1.maven.org/maven2/org/apache/flink/flink-sql-connector-hive-3.1.2_2.11/</a></p>
-<p><img src="/2021/06/23/Flink1-3-0-intergation-hive3-1-2/image-20210623162632710.png" alt="下载flink连接hive之sql"></p>
-<h2 id="需要下载的jar总结"><a href="#需要下载的jar总结" class="headerlink" title="需要下载的jar总结"></a>需要下载的jar总结</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">flink-connector-hive_2.11-1.13.0.jar</span></span><br><span class="line"><span class="attr">hive-exec-3.1.2.jar</span></span><br><span class="line"><span class="attr">flink-sql-connector-hive-3.1.2_2.11-1.13.0.jar</span></span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="flink-SQL"><a href="#flink-SQL" class="headerlink" title="flink-SQL"></a>flink-SQL</h1><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> catalogs;</span><br><span class="line">use catalog wmyhive;</span><br><span class="line"><span class="comment">-- 注意：Flink是不支持双引号的，所以我们最好是写单引号，例如</span></span><br><span class="line"><span class="keyword">select</span> <span class="string">'hello world'</span>;</span><br><span class="line"><span class="comment">-- 查看flink内置函数，flink是不区分大小写的</span></span><br><span class="line"><span class="keyword">show</span> functions;</span><br><span class="line"><span class="comment">-- 当前时间</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">current_timestamp</span>;</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="需要结合hive版本的jar"><a href="#需要结合hive版本的jar" class="headerlink" title="需要结合hive版本的jar"></a>需要结合hive版本的jar</h2><p>从HIVE_HOME/lib中去下载</p>
-<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hive-metastore-3.1.2.jar</span></span><br><span class="line"><span class="attr">libfb303-0.9.3.jar</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="源表"><a href="#源表" class="headerlink" title="源表"></a>源表</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">数据来源：Kafka主题、数据库、文件系统、……</span></span><br><span class="line"><span class="comment">DDL：创建、更改、删除</span></span><br><span class="line"><span class="comment">Flink支持不同的连接器和格式</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 定义由CSV文件支持的源表的案例</span></span><br><span class="line"><span class="comment">-- 我使用得是hive创建表，然后使用flink来读取</span></span><br><span class="line"><span class="comment">-- 数据</span></span><br><span class="line"><span class="number">7369</span>,SMITH,CLERK,<span class="number">7902</span>,<span class="number">1980</span><span class="operator">/</span><span class="number">12</span><span class="operator">/</span><span class="number">17</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">800</span>,</span><br><span class="line"><span class="number">7499</span>,ALLEN,SALESMAN,<span class="number">7698</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">2</span><span class="operator">/</span><span class="number">20</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">1600</span>,<span class="number">300</span></span><br><span class="line"><span class="number">7521</span>,WARD,SALESMAN,<span class="number">7698</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">2</span><span class="operator">/</span><span class="number">22</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">1250</span>,<span class="number">500</span></span><br><span class="line"><span class="number">7566</span>,JONES,MANAGER,<span class="number">7839</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">4</span><span class="operator">/</span><span class="number">2</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">2975</span>,</span><br><span class="line"><span class="number">7654</span>,MARTIN,SALESMAN,<span class="number">7698</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">9</span><span class="operator">/</span><span class="number">28</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">1250</span>,<span class="number">1400</span></span><br><span class="line"><span class="number">7698</span>,BLAKE,MANAGER,<span class="number">7839</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">5</span><span class="operator">/</span><span class="number">1</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">2850</span>,</span><br><span class="line"><span class="number">7782</span>,CLARK,MANAGER,<span class="number">7839</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">6</span><span class="operator">/</span><span class="number">9</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">2450</span>,</span><br><span class="line"><span class="number">7788</span>,SCOTT,ANALYST,<span class="number">7566</span>,<span class="number">1987</span><span class="operator">/</span><span class="number">4</span><span class="operator">/</span><span class="number">19</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">1500</span>,</span><br><span class="line"><span class="number">7839</span>,KING,PRESIDENT,,<span class="number">1981</span><span class="operator">/</span><span class="number">11</span><span class="operator">/</span><span class="number">17</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">5000</span>,</span><br><span class="line"><span class="number">7844</span>,TURNER,SALESMAN,<span class="number">7698</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">9</span><span class="operator">/</span><span class="number">8</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">1500</span>,<span class="number">0</span></span><br><span class="line"><span class="number">7876</span>,ADAMS,CLERK,<span class="number">7788</span>,<span class="number">1987</span><span class="operator">/</span><span class="number">5</span><span class="operator">/</span><span class="number">23</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">1100</span>,</span><br><span class="line"><span class="number">7900</span>,JAMES,CLERK,<span class="number">7698</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">12</span><span class="operator">/</span><span class="number">3</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">950</span>,</span><br><span class="line"><span class="number">7902</span>,FORD,ANALYST,<span class="number">7566</span>,<span class="number">1981</span><span class="operator">/</span><span class="number">12</span><span class="operator">/</span><span class="number">3</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">3000</span>,</span><br><span class="line"><span class="number">7934</span>,MILLER,CLERK,<span class="number">7782</span>,<span class="number">1982</span><span class="operator">/</span><span class="number">1</span><span class="operator">/</span><span class="number">23</span> <span class="number">0</span>:<span class="number">00</span>,<span class="number">1300</span>,</span><br><span class="line"></span><br><span class="line">hive (yaxin)<span class="operator">&gt;</span> <span class="keyword">CREATE</span> <span class="keyword">EXTERNAL</span> <span class="keyword">TABLE</span> t_employee(</span><br><span class="line">            <span class="operator">&gt;</span> id <span class="type">INT</span>,</span><br><span class="line">            <span class="operator">&gt;</span> name STRING,</span><br><span class="line">            <span class="operator">&gt;</span> job STRING,</span><br><span class="line">            <span class="operator">&gt;</span> manager <span class="type">INT</span>,</span><br><span class="line">            <span class="operator">&gt;</span> hiredate <span class="type">TIMESTAMP</span>,</span><br><span class="line">            <span class="operator">&gt;</span> salary <span class="type">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>)</span><br><span class="line">            <span class="operator">&gt;</span> )</span><br><span class="line">            <span class="operator">&gt;</span> PARTITIONED <span class="keyword">BY</span> (deptno <span class="type">INT</span>)   </span><br><span class="line">            <span class="operator">&gt;</span> <span class="type">ROW</span> FORMAT DELIMITED </span><br><span class="line">            <span class="operator">&gt;</span> FIELDS TERMINATED <span class="keyword">BY</span> "\t"</span><br><span class="line">            <span class="operator">&gt;</span> LOCATION <span class="string">'/user/hive/warehouse/yaxin.db/'</span>;</span><br><span class="line">OK</span><br><span class="line"><span class="type">Time</span> taken: <span class="number">0.218</span> seconds</span><br><span class="line"></span><br><span class="line">hive (yaxin)<span class="operator">&gt;</span> load data <span class="keyword">local</span> inpath <span class="string">'/opt/module/sql-file/emp.txt'</span> overwrite <span class="keyword">into</span> <span class="keyword">table</span> t_employee <span class="keyword">partition</span>(deptno<span class="operator">=</span><span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">Flink <span class="keyword">SQL</span><span class="operator">&gt;</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t_employee;</span><br><span class="line"></span><br><span class="line">Flink <span class="keyword">SQL</span><span class="operator">&gt;</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t_employee <span class="keyword">where</span> deptno <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Flink官网连接hive说明"><a href="#Flink官网连接hive说明" class="headerlink" title="Flink官网连接hive说明"></a>Flink官网连接hive说明</h2><p><a target="_blank" rel="noopener" href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/connectors/table/hive/overview/#dependencies">flink1.3.0官网连接hive3.1.2</a></p>
-<p><img src="/2021/06/23/Flink1-3-0-intergation-hive3-1-2/image-20210623163014604.png" alt="官网摘抄"></p>
-<h2 id="集成所需全部jar"><a href="#集成所需全部jar" class="headerlink" title="集成所需全部jar"></a>集成所需全部jar</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">自行去官网下载：</span></span><br><span class="line">    <span class="attr">flink-connector-hive_2.11-1.13.0.jar</span></span><br><span class="line">    <span class="attr">hive-exec-3.1.2.jar</span></span><br><span class="line">    <span class="attr">flink-sql-connector-hive-3.1.2_2.11-1.13.0.jar</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">从hive安装目录下寻找：</span></span><br><span class="line">    <span class="attr">hive-metastore-3.1.2.jar</span></span><br><span class="line">    <span class="attr">libfb303-0.9.3.jar</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Flink <span class="keyword">SQL</span><span class="operator">&gt;</span> <span class="keyword">select</span> id,<span class="built_in">count</span>(<span class="number">1</span>)</span><br><span class="line"><span class="operator">&gt;</span> <span class="keyword">from</span> t_employee</span><br><span class="line"><span class="operator">&gt;</span> <span class="keyword">group</span> <span class="keyword">by</span> id;</span><br></pre></td></tr></tbody></table></figure>
 
-
-
-<h2 id="Flink配置编写"><a href="#Flink配置编写" class="headerlink" title="Flink配置编写"></a>Flink配置编写</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">catalogs</span>:<span class="string"></span></span><br><span class="line"> <span class="meta">-</span> <span class="string">name: wmyhive</span></span><br><span class="line">   <span class="attr">type</span>: <span class="string">hive</span></span><br><span class="line">   <span class="meta">hive-conf-dir</span>: <span class="string">/opt/module/hive-3.1.2/conf</span></span><br><span class="line">   <span class="meta">default-database</span>: <span class="string">yaxin</span></span><br><span class="line">   <span class="meta">hadoop-conf-dir</span>: <span class="string">/opt/module/hadoop-3.1.3/etc/hadoop</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hadoop-path</span></span><br><span class="line"><span class="attr">export</span> <span class="string">HADOOP_HOME=/opt/module/hadoop-3.1.3</span></span><br><span class="line"><span class="attr">export</span> <span class="string">HADOOP_CONF_DIR=/opt/module/hadoop-3.1.3/etc/hadoop</span></span><br><span class="line"><span class="attr">export</span> <span class="string">HADOOP_CLASSPATH=`hadoop classpath`</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># hive-path</span></span><br><span class="line"><span class="attr">export</span> <span class="string">HIVE_HOME=/opt/module/hive-3.1.2</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$HIVE_HOME/bin</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># flink-path</span></span><br><span class="line"><span class="attr">export</span> <span class="string">FLINK_HOME=/opt/module/flink-1.13.1</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$FLINK_HOME/bin</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>需要把所集成的全部jar和flink配置和环境变量全部都分发给所有的节点，并source /etc/profile</p>
-<h2 id="进程启动"><a href="#进程启动" class="headerlink" title="进程启动"></a>进程启动</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">lib]# xcall.sh jps</span></span><br><span class="line"><span class="meta">------------------------</span> <span class="string">jps yaxin01 ------------------------</span></span><br><span class="line"><span class="attr">32400</span> <span class="string">RunJar</span></span><br><span class="line"><span class="attr">39136</span> <span class="string">SqlClient</span></span><br><span class="line"><span class="attr">2865</span> <span class="string">QuorumPeerMain</span></span><br><span class="line"><span class="attr">3666</span> <span class="string">Kafka</span></span><br><span class="line"><span class="attr">19015</span> <span class="string">DataNode</span></span><br><span class="line"><span class="attr">38567</span> <span class="string">StandaloneSessionClusterEntrypoint</span></span><br><span class="line"><span class="attr">15496</span> <span class="string">Bootstrap</span></span><br><span class="line"><span class="attr">19368</span> <span class="string">NodeManager</span></span><br><span class="line"><span class="attr">39049</span> <span class="string">TaskManagerRunner</span></span><br><span class="line"><span class="attr">43497</span> <span class="string">Jps</span></span><br><span class="line"><span class="attr">18876</span> <span class="string">NameNode</span></span><br><span class="line"><span class="attr">37692</span> <span class="string">RunJar</span></span><br><span class="line"><span class="meta">------------------------</span> <span class="string">jps yaxin02 ------------------------</span></span><br><span class="line"><span class="attr">4992</span> <span class="string">NodeManager</span></span><br><span class="line"><span class="attr">10178</span> <span class="string">Jps</span></span><br><span class="line"><span class="attr">4650</span> <span class="string">DataNode</span></span><br><span class="line"><span class="attr">4826</span> <span class="string">ResourceManager</span></span><br><span class="line"><span class="attr">9626</span> <span class="string">TaskManagerRunner</span></span><br><span class="line"><span class="attr">2060</span> <span class="string">QuorumPeerMain</span></span><br><span class="line"><span class="attr">2460</span> <span class="string">Kafka</span></span><br><span class="line"><span class="meta">------------------------</span> <span class="string">jps yaxin03 ------------------------</span></span><br><span class="line"><span class="attr">4392</span> <span class="string">DataNode</span></span><br><span class="line"><span class="attr">4600</span> <span class="string">NodeManager</span></span><br><span class="line"><span class="attr">9128</span> <span class="string">TaskManagerRunner</span></span><br><span class="line"><span class="attr">2219</span> <span class="string">Kafka</span></span><br><span class="line"><span class="attr">4462</span> <span class="string">SecondaryNameNode</span></span><br><span class="line"><span class="attr">9758</span> <span class="string">Jps</span></span><br><span class="line"><span class="attr">1823</span> <span class="string">QuorumPeerMain</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="十分重要十分重要十分重要"><a href="#十分重要十分重要十分重要" class="headerlink" title="十分重要十分重要十分重要"></a>十分重要<em>十分重要</em>十分重要</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">如果我们不启动hive</span> <span class="string">metastore 的话会报错，会出现flink无法创建catalog的情况</span></span><br><span class="line"></span><br><span class="line"><span class="attr">nohup</span> <span class="string">hive --service metastore &amp;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="集成测试"><a href="#集成测试" class="headerlink" title="集成测试"></a>集成测试</h2><h3 id="在hive种创建表"><a href="#在hive种创建表" class="headerlink" title="在hive种创建表"></a>在hive种创建表</h3><p>![hive中建表]<img src="/2021/06/23/Flink1-3-0-intergation-hive3-1-2/image-20210623164320197.png" alt="image-20210623164320197"></p>
-<h3 id="在flink-sql中查看"><a href="#在flink-sql中查看" class="headerlink" title="在flink sql中查看"></a>在flink sql中查看</h3><p><img src="/2021/06/23/Flink1-3-0-intergation-hive3-1-2/image-20210623164336657.png" alt="flink sql"></p>
-<p>非常的高兴，自己弄了两个小时终于弄出来。。。</p>
-<p>个人经验，就是我们在搭建的时候，最好是给我们的集群给快照一下，以免造成不可以挽回的局面。。。</p>
-<p>由于工作的要求，我不得不去尝试一下。。。</p>
-<h2 id="工作要求"><a href="#工作要求" class="headerlink" title="工作要求"></a>工作要求</h2><ul>
-<li>flink 1.7 </li>
-<li>hive 3.1.2</li>
-<li>hadoop 3.1.3</li>
-</ul>
-<p>希望能够成功吧。。。</p>
-<p>不过在做这些的时候，最好是不要配置flink环境变量的，或者是在启动的时候，一定要指定路径穷，否者会出现那种交叉的结果。。。</p>
-<p>拭目以待。。。。</p>
+<p>学习记录：<a target="_blank" rel="noopener" href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/dev/table/sql/queries/overview/">https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/dev/table/sql/queries/overview/</a></p>
 
                 
             </div>
@@ -556,7 +513,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/23/Flink1-3-0-intergation-hive3-1-2/">http://example.com/2021/06/23/Flink1-3-0-intergation-hive3-1-2/</a>
+                    <a href="http://example.com/2021/06/24/Flink-sql-note/">http://example.com/2021/06/24/Flink-sql-note/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -765,9 +722,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/06/24/Flink-sql-note/">
                     <div class="card-image">
@@ -785,9 +743,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -800,6 +758,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -818,13 +777,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/23/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5/">
+                <a href="/2021/06/23/Flink1-3-0-intergation-hive3-1-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="内存分配与回收策略">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Flink1.3.0-intergation-hive3.1.2">
                         
-                        <span class="card-title">内存分配与回收策略</span>
+                        <span class="card-title">Flink1.3.0-intergation-hive3.1.2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -841,8 +800,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JVM/" class="post-category">
-                                    JVM
+                            <a href="/categories/flink/" class="post-category">
+                                    flink
                                 </a>
                             
                             
@@ -852,8 +811,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JVM/">
-                        <span class="chip bg-color">JVM</span>
+                    <a href="/tags/flink/">
+                        <span class="chip bg-color">flink</span>
                     </a>
                     
                 </div>
