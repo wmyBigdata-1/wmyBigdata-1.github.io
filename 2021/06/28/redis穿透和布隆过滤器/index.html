@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="二分查找算法, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="redis穿透和布隆过滤器, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>二分查找算法 | 情深骚明&amp;博客</title>
+    <title>redis穿透和布隆过滤器 | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">二分查找算法</h1>
+                    <h1 class="description center-align post-title">redis穿透和布隆过滤器</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java/" class="post-category">
-                                java
+                            <a href="/categories/redis/" class="post-category">
+                                redis
                             </a>
                         
                     </div>
@@ -480,23 +480,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="二分查找算法"><a href="#二分查找算法" class="headerlink" title="二分查找算法"></a>二分查找算法</h1><h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><ul>
-<li>递归</li>
-<li>非递归</li>
-</ul>
-<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a><em><strong>算法描述</strong></em></h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">1、首先确定该数组中间的下标：mid</span> = <span class="string">(left + right) / 2</span></span><br><span class="line"><span class="meta">2、然后让需要查找的数</span> <span class="string">findVal 和 arr[mid] 来进行比较</span></span><br><span class="line">	<span class="attr">findVal</span> <span class="string">&gt; arr[mid] 说明你要查找的数大于mid的右边，因此需要递归的向右查找</span></span><br><span class="line">	<span class="attr">findVal</span> <span class="string">&lt; arr[mid] 说明你要查找的数在mid大左边，因此需要递归的向左查找</span></span><br><span class="line">	<span class="attr">findVal</span> = <span class="string">arr[mid] 说明查找</span></span><br><span class="line"><span class="attr">思考：什么时候结束递归</span></span><br><span class="line">	<span class="attr">1、找到了就结束递归</span></span><br><span class="line">	<span class="meta">2、找不到：递归完整个数组，仍然没有找到findVal，也要需要结束递归，当left</span> <span class="string">&gt; right，就需要break</span></span><br><span class="line">	</span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="redis高级"><a href="#redis高级" class="headerlink" title="redis高级"></a>redis高级</h1><h2 id="收获所得"><a href="#收获所得" class="headerlink" title="收获所得"></a>收获所得</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">1、什么是缓存穿透、缓存雪崩、缓存击穿</span></span><br><span class="line"><span class="attr">2、存储算法的原理</span></span><br><span class="line"><span class="attr">3、布隆过滤器实现原理和应用场景</span></span><br><span class="line"><span class="attr">4、分布式锁的原理以及Redis、MySQL、Zookeeper分布式锁利与弊</span></span><br><span class="line"><span class="attr">5、如何实现分布式锁和实现缓存击穿的问题</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wmy.search;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ClassName:BinarySearch</span></span><br><span class="line"><span class="comment"> * Package:com.wmy.search</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>:2021/6/28 17:27</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>:数仓开发工程师</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@email</span>:2647716549@qq.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 二分查找的前提，数组是有序的</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span>[] arr = {<span class="number">1</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">89</span>, <span class="number">100</span>, <span class="number">1234</span>};</span><br><span class="line">        System.out.println(binarySearch(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>, <span class="number">10</span>));</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 二分查找</span></span><br><span class="line"><span class="comment">      * <span class="doctag">@param</span> arr 查找数组</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> left 左边游标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> right 右边游标</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> findVal 查找的值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回的值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span> findVal)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> midVal = arr[mid];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (findVal &gt; midVal) {</span><br><span class="line">            <span class="keyword">return</span> binarySearch(arr, mid + <span class="number">1</span>, right, findVal);</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (findVal &lt; mid) {</span><br><span class="line">            <span class="keyword">return</span> binarySearch(arr, left, mid - <span class="number">1</span>, findVal);</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="BS架构"><a href="#BS架构" class="headerlink" title="BS架构"></a>BS架构</h2><p><img src="/2021/06/28/redis%E7%A9%BF%E9%80%8F%E5%92%8C%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/image-20210628181423174.png" alt="BS 架构"></p>
+<h3 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">数据库的瓶颈：</span></span><br><span class="line"><span class="attr">1、用户体验差</span></span><br><span class="line"><span class="attr">2、响应时间过长</span></span><br><span class="line"></span><br><span class="line"><span class="attr">解决方案：</span></span><br><span class="line"><span class="attr">1、解决连接MySQL</span></span><br><span class="line"><span class="attr">2、数据库连接池，现在以及考虑进去，可能会发生瓶颈</span></span><br><span class="line"><span class="meta">3、分库分表、集群、加缓存层</span> <span class="string">---&gt; 解决数据库的瓶颈</span></span><br><span class="line"></span><br><span class="line"><span class="attr">首先缓存：</span></span><br><span class="line"><span class="attr">1、Redis</span></span><br><span class="line">    <span class="attr">存储热门数据，经常被访问的数据，先向Redistribution里面查询</span></span><br><span class="line">    <span class="attr">在去MySQL中查，给MySQL抵挡了一部分的请求</span></span><br><span class="line"></span><br><span class="line"><span class="attr">减少连接MySQL，redis的缓存就是有效的减少MySQL压力</span></span><br><span class="line"></span><br><span class="line"><span class="attr">问题：</span></span><br><span class="line"><span class="meta">redis缓存层</span> <span class="string">---&gt; 缓存穿透肯定会发生</span></span><br><span class="line"><span class="attr">避免发生缓存穿透怎么办？</span></span><br><span class="line"><span class="attr">1、数据的同步（数据无解）不能保证实时，不能全部放到Redis中</span></span><br><span class="line"><span class="attr">2、可以避免高频的缓存穿透，不能把MySQL的数据放到Redis，没有这么大的内存。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">黑客攻击：</span></span><br><span class="line">	<span class="attr">不停的攻击数据库，数据可能会挂掉</span></span><br><span class="line">	<span class="meta">如何去解决</span> <span class="string">---&gt; </span></span><br><span class="line">		<span class="attr">1、第一次去Redis没有找到，去MySQL中查，MySQL中查出来的数据是null，缓存到Redis中，接下来的请求都在Redis中来拿到，就不需要接触MySQL。</span></span><br><span class="line">		<span class="attr">采用null的解决方案来解决</span></span><br><span class="line">		<span class="meta">2、这样会导致内存比较紧张，过滤器出现了问题</span> <span class="string">---&gt; 内存紧张的问题</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="二分查找功能完善"><a href="#二分查找功能完善" class="headerlink" title="二分查找功能完善"></a>二分查找功能完善</h3><h4 id="考虑找不到的情况"><a href="#考虑找不到的情况" class="headerlink" title="考虑找不到的情况"></a>考虑找不到的情况</h4><ul>
-<li>没有考虑找不到的情况，如果写一个不存在的数就会出现错误</li>
-<li>Exception in thread “main” java.lang.StackOverflowError</li>
-</ul>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (left &gt; right) {</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="如何解决过滤器内存紧张的问题"><a href="#如何解决过滤器内存紧张的问题" class="headerlink" title="如何解决过滤器内存紧张的问题"></a>如何解决过滤器内存紧张的问题</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">布隆过滤器：</span></span><br><span class="line">	<span class="attr">通过一定的错误率来换取空间</span></span><br><span class="line">	<span class="attr">原理：</span></span><br><span class="line">		<span class="attr">Bit数组来存储数据，初始化完成之后都是0</span></span><br><span class="line">		<span class="attr">传给Hash函数，自定义Hash函数</span></span><br><span class="line">			<span class="meta">hash值的范围必须在</span> <span class="string">0 ,数组 -1</span></span><br><span class="line">			<span class="attr">足够散列</span></span><br><span class="line">			<span class="attr">Hash值代表的是Bite数组的下标，这样就可以具体代表数据库中的一个数据了</span></span><br><span class="line"><span class="attr">Hash碰撞率：</span></span><br><span class="line">	<span class="meta">这样就会出现一个错误率，散列出来的索引值可能会相同，计算结果</span> <span class="string">[0,arr.length - 1]</span></span><br><span class="line">	<span class="attr">错误数据，由于发生Hash碰撞而导致的，通过一定的错误率来换取的空间，因为Bit数组占的空间太少了</span></span><br><span class="line">	<span class="attr">计算的方式都是可以上网自己去计算的</span></span><br><span class="line">	<span class="attr">布隆算法存在Hash碰撞所以导致错误率</span></span><br><span class="line"></span><br><span class="line"><span class="attr">如何降低错误率：</span></span><br><span class="line">	<span class="attr">如何解决Hash碰撞的概率</span></span><br><span class="line">		<span class="meta">1、加大数组的长度</span> <span class="string">---&gt; Hash 值就多，发生hash碰撞的可能性就会越小</span></span><br><span class="line">		<span class="meta">2、增加hash函数的个数</span> <span class="string">---&gt; 增加计算量从而导致变重复的数据索引 (func num)^len(n)</span></span><br><span class="line">	<span class="attr">Hash函数的个数并不是越多越好，需要参考数组的长度</span></span><br><span class="line">	<span class="attr">错误率体现在布隆过滤器算法，说数据存在，实际数据有可能不存在，有可能是发生了Hash碰撞，如果说数据不存在，数据一定不存在</span></span><br><span class="line"></span><br><span class="line"><span class="attr">删除数据的弊端：</span></span><br><span class="line">	<span class="attr">索引位置的数据可能代表数据库中的好几个数据</span></span><br><span class="line">	<span class="attr">可以弄个二维的计数器，如果计数器为0，可以放心的把索引变为0</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h4 id="如果数据重复的情况"><a href="#如果数据重复的情况" class="headerlink" title="如果数据重复的情况"></a>如果数据重复的情况</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 完成一个课后思考题：如果数组中右多个数据重复的时候，需要把这些相同的数据给打印出来</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 思路分析：</span></span><br><span class="line"><span class="comment">     *  1、在找到mid的值时，不要马上返回</span></span><br><span class="line"><span class="comment">     *  2、先可以先mid这个索引值的左边扫描，将所有满足重复的数据的元素的下标加入到集合ArrayList</span></span><br><span class="line"><span class="comment">     *  3、先mid索引值的右边扫描，将所有满足重复的数据的元素的下标加入到集合ArrayList</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList <span class="title">binarySearch1</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span> findVal)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> midVal = arr[mid];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (left &gt; right) {</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (findVal &gt; midVal) {</span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, mid + <span class="number">1</span>, right, findVal);</span><br><span class="line">    } <span class="keyword">else</span> <span class="keyword">if</span> (findVal &lt; mid) {</span><br><span class="line">        <span class="keyword">return</span> binarySearch1(arr, left, mid - <span class="number">1</span>, findVal);</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        <span class="comment">// 先创建一个Arraylist</span></span><br><span class="line">        ArrayList&lt;Integer&gt; resultList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">// 先可以先mid这个索引值的左边扫描，将所有满足重复的数据的元素的下标加入到集合ArrayList</span></span><br><span class="line">        <span class="keyword">int</span> temp = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) {</span><br><span class="line">            <span class="keyword">if</span> (temp &lt; <span class="number">0</span> || arr[temp] != findVal) {</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">            <span class="comment">// 否则将temp放入到集合去</span></span><br><span class="line">            resultList.add(temp);</span><br><span class="line">            temp -= <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">        resultList.add(mid);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 先mid索引值的右边扫描，将所有满足重复的数据的元素的下标加入到集合ArrayList</span></span><br><span class="line">        temp = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) {</span><br><span class="line">            <span class="keyword">if</span> (temp &gt; arr.length - <span class="number">1</span> || arr[temp] != findVal) {</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">            <span class="comment">// 否则将temp放入到集合去</span></span><br><span class="line">            resultList.add(temp);</span><br><span class="line">            temp += <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> resultList;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="布隆过滤器算法代码实现"><a href="#布隆过滤器算法代码实现" class="headerlink" title="布隆过滤器算法代码实现"></a>布隆过滤器算法代码实现</h2><h3 id="Hash函数"><a href="#Hash函数" class="headerlink" title="Hash函数"></a>Hash函数</h3><p>这个可以使用Flink的那个电商的项目的那个来进行回答</p>
+<h2 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">缓存的数据突然失效或者无法访问，导致大量的请求转向MySQL的过程，导致数据库无法运行的一个惨状</span></span><br><span class="line"><span class="attr">原因和解决思路：</span></span><br><span class="line">	<span class="attr">1、Redis中缓存的数据它的有效期都是一致的</span></span><br><span class="line">	<span class="attr">2、给每一条数据加一个随机的有效期，解决这个问题的思路，不要突然同时失效</span></span><br><span class="line">	<span class="attr">3、Redis可以弄分布式缓存：切片集成模式，不要突然失效，给程序员一点缓冲时间</span></span><br><span class="line">	<span class="attr">4、采用副本集群模式</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h4 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h4><p><img src="/2021/06/28/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/image-20210628175641118.png" alt="二分查找算法"></p>
+<h2 id="击穿和雪崩的区别"><a href="#击穿和雪崩的区别" class="headerlink" title="击穿和雪崩的区别"></a>击穿和雪崩的区别</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Redis集群的Hash一致性算法：</span></span><br><span class="line">	<span class="meta">Redis集群</span> <span class="string">---&gt; 借助Hash一致性算法</span></span><br><span class="line">	<span class="attr">问题推理：</span></span><br><span class="line">		<span class="attr">Data</span> <span class="string">---&gt; 2 Node(Redis1 , Redis2) 平均分配 ---&gt; Hash取模（Key-Value）</span></span><br><span class="line">		<span class="attr">Hashy</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
 
                 
             </div>
@@ -523,7 +520,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/28/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/">http://example.com/2021/06/28/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</a>
+                    <a href="http://example.com/2021/06/28/redis%E7%A9%BF%E9%80%8F%E5%92%8C%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/">http://example.com/2021/06/28/redis%E7%A9%BF%E9%80%8F%E5%92%8C%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -561,8 +558,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
                                 </a>
                             
                         </div>
@@ -732,9 +729,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/06/28/redis%E7%A9%BF%E9%80%8F%E5%92%8C%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/">
                     <div class="card-image">
@@ -752,9 +750,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -767,6 +765,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -785,13 +784,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/28/HashTable%E6%A1%88%E4%BE%8B/">
+                <a href="/2021/06/28/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="HashTable案例">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="二分查找算法">
                         
-                        <span class="card-title">HashTable案例</span>
+                        <span class="card-title">二分查找算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
