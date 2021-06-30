@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HBASE问题集, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="HBASE优化, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HBASE问题集 | 情深骚明&amp;博客</title>
+    <title>HBASE优化 | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HBASE问题集</h1>
+                    <h1 class="description center-align post-title">HBASE优化</h1>
                 </div>
             </div>
         </div>
@@ -480,20 +480,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="hbase问题集"><a href="#hbase问题集" class="headerlink" title="hbase问题集"></a>hbase问题集</h1><h2 id="HBASE做实时"><a href="#HBASE做实时" class="headerlink" title="HBASE做实时"></a>HBASE做实时</h2><ul>
-<li>1、入hbase   批量put 集群说顶不住<pre><code>①找时间研究一下批量put和bulkload性能差异。  put为啥顶不住    
-</code></pre>
-</li>
-<li>2、入hbase   bulkload 离线嘛 实时做不了    hdfs文件-》hfile -》bulkload</li>
-<li>3、HBASE总结<ul>
-<li>put 和 bulkload  </li>
-<li>hbase下列族和列的关系，但单列族单列 单列族多列 对性能有什么影响，版本号怎么维护  每个版本有什么差异</li>
-<li>region分裂的原理以及对bulkload的影响</li>
-<li>hbase删数据 原理</li>
-<li>hbase能否建分区表</li>
+                <h1 id="hbase优化"><a href="#hbase优化" class="headerlink" title="hbase优化"></a>hbase优化</h1><h3 id="HBASE高可用"><a href="#HBASE高可用" class="headerlink" title="HBASE高可用"></a>HBASE高可用</h3><h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>在修改配置文件的生活，得关闭hadoop,zookeeper,hbase集群，然后修改配置</p>
+<p>在conf目录下：touch backup-masters  |  echo yaxin02 &gt; backup-masters</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">~]# cd /opt/module/hbase-2.3.5/conf/</span></span><br><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">~]# cd /opt/module/hbase-2.3.5/conf/</span></span><br><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">conf]# touch backup-masters</span></span><br><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">conf]#  echo yaxin02 &gt; backup-masters</span></span><br><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">conf]# cat backup-masters </span></span><br><span class="line"><span class="attr">yaxin02</span></span><br><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">conf]# scp -r backup-masters yaxin02:`pwd`</span></span><br><span class="line"><span class="meta">backup-masters</span>                                                        <span class="string">100%    8     0.2KB/s   00:00    </span></span><br><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">conf]# scp -r backup-masters yaxin03:`pwd`</span></span><br><span class="line"><span class="meta">backup-masters</span>                                                        <span class="string">100%    8     0.4KB/s   00:00  </span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="启动进程"><a href="#启动进程" class="headerlink" title="启动进程"></a>启动进程</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">hd.sh</span> <span class="string">start</span></span><br><span class="line"><span class="meta">zk.sh</span> <span class="string">start</span></span><br><span class="line"><span class="attr">start-hbase.sh</span></span><br><span class="line"></span><br><span class="line"><span class="attr">running</span> <span class="string">master, logging to /opt/module/hbase-2.3.5/logs/hbase-root-master-yaxin01.out</span></span><br><span class="line"><span class="attr">yaxin02</span>: <span class="string">running regionserver, logging to /opt/module/hbase-2.3.5/bin/../logs/hbase-root-regionserver-yaxin02.out</span></span><br><span class="line"><span class="attr">yaxin03</span>: <span class="string">running regionserver, logging to /opt/module/hbase-2.3.5/bin/../logs/hbase-root-regionserver-yaxin03.out</span></span><br><span class="line"><span class="attr">yaxin01</span>: <span class="string">running regionserver, logging to /opt/module/hbase-2.3.5/bin/../logs/hbase-root-regionserver-yaxin01.out</span></span><br><span class="line"><span class="attr">yaxin02</span>: <span class="string">running master, logging to /opt/module/hbase-2.3.5/bin/../logs/hbase-root-master-yaxin02.out</span></span><br><span class="line"></span><br><span class="line"><span class="meta">[root@yaxin01</span> <span class="string">conf]# xcall.sh jps</span></span><br><span class="line"><span class="meta">------------------------</span> <span class="string">jps yaxin01 ------------------------</span></span><br><span class="line"><span class="attr">1776</span> <span class="string">DataNode</span></span><br><span class="line"><span class="attr">1649</span> <span class="string">NameNode</span></span><br><span class="line"><span class="attr">2136</span> <span class="string">NodeManager</span></span><br><span class="line"><span class="attr">2456</span> <span class="string">HMaster</span></span><br><span class="line"><span class="attr">3113</span> <span class="string">Jps</span></span><br><span class="line"><span class="attr">2666</span> <span class="string">HRegionServer</span></span><br><span class="line"><span class="attr">1534</span> <span class="string">QuorumPeerMain</span></span><br><span class="line"><span class="meta">------------------------</span> <span class="string">jps yaxin02 ------------------------</span></span><br><span class="line"><span class="attr">1637</span> <span class="string">ResourceManager</span></span><br><span class="line"><span class="attr">2311</span> <span class="string">HMaster</span></span><br><span class="line"><span class="attr">1800</span> <span class="string">NodeManager</span></span><br><span class="line"><span class="attr">2201</span> <span class="string">HRegionServer</span></span><br><span class="line"><span class="attr">2541</span> <span class="string">Jps</span></span><br><span class="line"><span class="attr">1391</span> <span class="string">QuorumPeerMain</span></span><br><span class="line"><span class="attr">1455</span> <span class="string">DataNode</span></span><br><span class="line"><span class="meta">------------------------</span> <span class="string">jps yaxin03 ------------------------</span></span><br><span class="line"><span class="attr">1200</span> <span class="string">QuorumPeerMain</span></span><br><span class="line"><span class="attr">1467</span> <span class="string">NodeManager</span></span><br><span class="line"><span class="attr">1917</span> <span class="string">Jps</span></span><br><span class="line"><span class="attr">1326</span> <span class="string">SecondaryNameNode</span></span><br><span class="line"><span class="attr">1662</span> <span class="string">HRegionServer</span></span><br><span class="line"><span class="attr">1263</span> <span class="string">DataNode</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="查看页面"><a href="#查看页面" class="headerlink" title="查看页面"></a>查看页面</h4><p><img src="/2021/06/30/HBASE%E4%BC%98%E5%8C%96/image-20210630073425505.png" alt="HBASE高可用界面"></p>
+<h4 id="启动单节点"><a href="#启动单节点" class="headerlink" title="启动单节点"></a>启动单节点</h4><ul>
+<li>hbase-daemon.sh start master</li>
 </ul>
+<h2 id="HBASE预分区"><a href="#HBASE预分区" class="headerlink" title="HBASE预分区"></a>HBASE预分区</h2><p>参考连接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/niurougan/p/3976519.html">https://www.cnblogs.com/niurougan/p/3976519.html</a></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Min</span> <span class="string">(R^2 * “hbase.hregion.memstore.flush.size”, “hbase.hregion.max.filesize”)  R是同一个table中在同一个region server中region的个数。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">hbase.hregion.memstore.flush.size</span> <span class="string">默认值 128MB。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">hbase.hregion.max.filesize默认值为10GB</span> <span class="string">。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">如果初始时R</span>=<span class="string">1,那么Min(128MB,10GB)=128MB,也就是说在第一个flush的时候就会触发分裂操作。</span></span><br><span class="line"><span class="meta">当R</span>=<span class="string">2的时候Min(2*2*128MB,10GB)=512MB ,当某个store file大小达到512MB的时候，就会触发分裂。</span></span><br><span class="line"> <span class="meta">如此类推，当R</span>=<span class="string">9的时候，store file 达到10GB的时候就会分裂，也就是说当R&gt;=9的时候，store file 达到10GB的时候就会分裂。</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样，在实际生产中，我们都不会让HBASE进行自动分区，我们一般都是让它进行预分区操作</p>
+<p>分区键最好设计的时候要大一点</p>
+<h2 id="RowKey设计"><a href="#RowKey设计" class="headerlink" title="RowKey设计"></a>RowKey设计</h2><ul>
+<li><p>随机（RandRound、取数据比较麻烦）MD5也是散列，按自己方法解决散列和取数据的问题</p>
+</li>
+<li><p>字符串反转</p>
+</li>
+<li><p>字符串拼接</p>
 </li>
 </ul>
+<h4 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h4><ul>
+<li>要散列还要到时候取数据的时候，还要拿到数据</li>
+<li>不能太散列，要不然取数据的时候就不太好拿数据，到月，这样让数据集中（手机号-年月）/ 5 ，这样出来的值就是一个月的值都在一个region当中，保证了数据的集中</li>
+<li>rowKey的设计完全是跟着业务去设计的，集中和散列，包括去数据是最难的</li>
+</ul>
+<h2 id="内存和基础调优"><a href="#内存和基础调优" class="headerlink" title="内存和基础调优"></a>内存和基础调优</h2><h4 id="内存优化"><a href="#内存优化" class="headerlink" title="内存优化"></a>内存优化</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">堆内存：JVM给的是70%，刷写的时间是不能太大</span> <span class="string">或者 太小，太久会让RegionServer长期处于不可用的状态</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="基础优化"><a href="#基础优化" class="headerlink" title="基础优化"></a>基础优化</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">1、允许HDFS文件追加</span> <span class="string">dfs.support.append</span></span><br><span class="line"><span class="meta">2、优化DataNode运行的最大文件打开数</span> <span class="string">dfs.datanode.max.transfer.threads</span></span><br><span class="line"><span class="meta">3、优化延迟高的数据操作的等待时间</span> <span class="string">dfs.image.transfer.timeout</span></span><br><span class="line"><span class="attr">4．优化数据的写入效率</span></span><br><span class="line">	<span class="attr">mapreduce.map.output.compress</span></span><br><span class="line">	<span class="attr">mapreduce.map.output.compress.codec</span></span><br><span class="line">	<span class="attr">解释：开启这两个数据可以大大提高文件的写入效率，减少写入时间。第一个属性值修改为</span></span><br><span class="line">	<span class="meta">true，第二个属性值修改为：org.apache.hadoop.io.compress.GzipCodec</span> <span class="string">或者其</span></span><br><span class="line">	<span class="attr">他压缩方式。</span></span><br><span class="line"><span class="meta">5．设置</span> <span class="string">RPC 监听数量 Hbase.regionserver.handler.count=30</span></span><br><span class="line"><span class="meta">6．优化</span> <span class="string">HStore 文件大小 hbase.hregion.max.filesize=10GB Hfile 达到阈值，进行文件切分</span></span><br><span class="line"><span class="meta">7．优化</span> <span class="string">HBase 客户端缓存 hbase.client.write.buffer 一般我们需要设定一定的缓存大小，以达到减少 RPC 次数的目的。</span></span><br><span class="line"><span class="meta">8．指定</span> <span class="string">scan.next 扫描 HBase 所获取的行数 hbase.client.scanner.caching 用于指定 scan.next 方法获取的默认行数，值越大，消耗内存越大</span></span><br><span class="line"><span class="meta">9．flush、compact、split</span> <span class="string">机制</span></span><br><span class="line">	<span class="meta">当</span> <span class="string">MemStore 达到阈值，将 Memstore 中的数据 Flush 进 Storefile；compact 机制则是把 flush 出来的小文件合并成大的 		Storefile 文件。split 则是当 Region 达到阈值，会把过大的 Region一分为二。</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>预估的情况没有人能预估的准，发现自动切分，需要把数据重新进行规划操作</p>
 
                 
             </div>
@@ -520,7 +539,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/30/HBASE%E9%97%AE%E9%A2%98%E9%9B%86/">http://example.com/2021/06/30/HBASE%E9%97%AE%E9%A2%98%E9%9B%86/</a>
+                    <a href="http://example.com/2021/06/30/HBASE%E4%BC%98%E5%8C%96/">http://example.com/2021/06/30/HBASE%E4%BC%98%E5%8C%96/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -729,9 +748,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/06/30/HBASE%E4%BC%98%E5%8C%96/">
                     <div class="card-image">
@@ -749,9 +769,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -764,6 +784,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -782,13 +803,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/28/redis%E7%A9%BF%E9%80%8F%E5%92%8C%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/">
+                <a href="/2021/06/30/HBASE%E9%97%AE%E9%A2%98%E9%9B%86/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="redis穿透和布隆过滤器">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="HBASE问题集">
                         
-                        <span class="card-title">redis穿透和布隆过滤器</span>
+                        <span class="card-title">HBASE问题集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -799,14 +820,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/redis/" class="post-category">
-                                    redis
+                            <a href="/categories/hbase/" class="post-category">
+                                    hbase
                                 </a>
                             
                             
@@ -816,8 +837,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/redis/">
-                        <span class="chip bg-color">redis</span>
+                    <a href="/tags/hbase/">
+                        <span class="chip bg-color">hbase</span>
                     </a>
                     
                 </div>
