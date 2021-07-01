@@ -482,7 +482,9 @@
             <div id="articleContent">
                 <h1 id="flink面试题"><a href="#flink面试题" class="headerlink" title="flink面试题"></a>flink面试题</h1><h2 id="1、压测和监控"><a href="#1、压测和监控" class="headerlink" title="1、压测和监控"></a>1、压测和监控</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">1、产生数据流过快，Flink</span> <span class="string">Web UI来可视化监控</span></span><br><span class="line"><span class="attr">数据源是Kafka，flink并行度设置多一点，如果还有，可能是Sink导致的，批量插入</span></span><br><span class="line"><span class="attr">Sink是HDFS，一次性写入的文件名，可以按照分组来进行区分，提高并行度</span></span><br><span class="line"><span class="attr">不管写到什么地方，改成批量写入，吞吐量会很大。</span></span><br><span class="line"><span class="attr">写到MySQL中，一次性执行多条数据</span></span><br><span class="line"></span><br><span class="line"><span class="meta">2、设置watermark延迟时间，会造成内存压力，迟到的数据输出到侧输出流中，使用状态后端，Rocks</span> <span class="string">DB开辟堆外存储空间，但是IO速度变慢</span></span><br><span class="line"></span><br><span class="line"><span class="meta">3、滑动窗口的长度</span> <span class="string">&gt; 滑动的距离，这样需要大量的数据保存在状态中，需要在多个窗口进行计算，这样效率会很低</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="2、Exactly-once如何实现"><a href="#2、Exactly-once如何实现" class="headerlink" title="2、Exactly-once如何实现"></a>2、Exactly-once如何实现</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">问题：Flink中exactly-once语义是如何实现得，状态是如何存储的？</span></span><br><span class="line"><span class="attr">解答：Flink依靠checkpoint机制来实现exactly-once语义，如果要实现端到端的exactly-once，还需要外部source和sink满足一定的条件，状态的存储通过状态后端来管理，Flink中可以配置不同的状态后端</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="2、Exactly-once如何实现"><a href="#2、Exactly-once如何实现" class="headerlink" title="2、Exactly-once如何实现"></a>2、Exactly-once如何实现</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">问题：Flink中exactly-once语义是如何实现得，状态是如何存储的？</span></span><br><span class="line"><span class="attr">解答：Flink依靠checkpoint机制来实现exactly-once语义，如果要实现端到端的exactly-once，还需要外部source和sink满足一定的条件，状态的存储通过状态后端来管理，Flink中可以配置不同的状态后端</span></span><br><span class="line"></span><br><span class="line"><span class="attr">HDFS</span> <span class="string">和 FLINK 的 print() 都是不支持回滚操作的</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Kafka</span> <span class="string">| MySQL | Redis</span></span><br><span class="line"><span class="attr">数据库要是支持回滚操作都是支持的</span></span><br><span class="line"><span class="attr">不支持回滚，Flink可以自定义Sink，自定义Sink要继承TwoPhaseCommitSinkFunction</span></span><br><span class="line"><span class="attr">每一次往Sink写入数据，第一次并不会写入目标，写入到缓冲区，当checkpoint结束之后，在把缓冲区里面的数据往真正的目标系统中</span></span><br><span class="line"><span class="attr">checkpoint默认是每隔100毫秒一次</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="3、海量Key去重"><a href="#3、海量Key去重" class="headerlink" title="3、海量Key去重"></a>3、海量Key去重</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">问题：怎么去重？考虑一个实时场景：双十一场景，滑动窗口长度为1一个小时，滑动距离为10秒钟，亿级用户，怎么样计算UV？</span></span><br><span class="line"><span class="attr">解答：使用类似于scala的Set数据结构或者Redis的set显然是不行的，因为有上一亿的Key，内存放不下，所以可以考虑使用布隆过滤器来进行去重操作。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">占用内存空间比较少，使用BitMap计算来进行存储，返回一个1或者0，表示有重复和没有重复的数据</span></span><br></pre></td></tr></tbody></table></figure>
 
 
                 
@@ -719,18 +721,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/06/30/flink%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                <a href="/2021/06/30/Flink%E8%BD%A6%E8%BE%86%E7%AE%A1%E6%8E%A7%E7%9B%91%E6%B5%8B%E9%A1%B9%E7%9B%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="flink面试题">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Flink车辆管控监测项目">
                         
-                        <span class="card-title">flink面试题</span>
+                        <span class="card-title">Flink车辆管控监测项目</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -740,27 +741,26 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/flink/" class="post-category">
-                                    flink
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category">
+                                    项目
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/flink/">
-                        <span class="chip bg-color">flink</span>
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">项目</span>
                     </a>
                     
                 </div>
