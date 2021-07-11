@@ -486,6 +486,8 @@
 
 <h2 id="3、海量Key去重"><a href="#3、海量Key去重" class="headerlink" title="3、海量Key去重"></a>3、海量Key去重</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">问题：怎么去重？考虑一个实时场景：双十一场景，滑动窗口长度为1一个小时，滑动距离为10秒钟，亿级用户，怎么样计算UV？</span></span><br><span class="line"><span class="attr">解答：使用类似于scala的Set数据结构或者Redis的set显然是不行的，因为有上一亿的Key，内存放不下，所以可以考虑使用布隆过滤器来进行去重操作。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">占用内存空间比较少，使用BitMap计算来进行存储，返回一个1或者0，表示有重复和没有重复的数据</span></span><br></pre></td></tr></tbody></table></figure>
 
+<h2 id="4、Watermark"><a href="#4、Watermark" class="headerlink" title="4、Watermark"></a>4、Watermark</h2><p><img src="/2021/06/30/flink%E9%9D%A2%E8%AF%95%E9%A2%98/image-20210705092842777.png" alt="自定义Watermark"></p>
+<h2 id="5、apply"><a href="#5、apply" class="headerlink" title="5、apply"></a>5、apply</h2><p><img src="/2021/06/30/flink%E9%9D%A2%E8%AF%95%E9%A2%98/image-20210705092938744.png" alt="apply方法"></p>
 
                 
             </div>
