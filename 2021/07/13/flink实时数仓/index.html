@@ -1,0 +1,1331 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>情深骚明&amp;博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">情深骚明&amp;博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">情深骚明&amp;博客</div>
+        <div class="logo-desc">
+            
+            本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/flink/">
+                                <span class="chip bg-color">flink</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/flink/" class="post-category">
+                                flink
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-07-13
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="flink实时数仓"><a href="#flink实时数仓" class="headerlink" title="flink实时数仓"></a>flink实时数仓</h1><h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><h3 id="HBASE面试题"><a href="#HBASE面试题" class="headerlink" title="HBASE面试题"></a>HBASE面试题</h3><ul>
+<li>读、写、更新</li>
+</ul>
+<h4 id="1、HBASE详细架构图"><a href="#1、HBASE详细架构图" class="headerlink" title="1、HBASE详细架构图"></a>1、HBASE详细架构图</h4><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210715112038448.png" alt="HBASE详细架构图"></p>
+<h4 id="2、HBASE写数据流程"><a href="#2、HBASE写数据流程" class="headerlink" title="2、HBASE写数据流程"></a>2、HBASE写数据流程</h4><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210715112234032.png" alt="HBASE写数据流程"></p>
+<h4 id="3、HBASE读数据流程"><a href="#3、HBASE读数据流程" class="headerlink" title="3、HBASE读数据流程"></a>3、HBASE读数据流程</h4><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210715112343002.png" alt="HBASE读数据流程"></p>
+<h4 id="4、HBASE-FLush流程"><a href="#4、HBASE-FLush流程" class="headerlink" title="4、HBASE FLush流程"></a>4、HBASE FLush流程</h4><h4 id="5、合并-amp-切分流程"><a href="#5、合并-amp-切分流程" class="headerlink" title="5、合并 &amp; 切分流程"></a>5、合并 &amp; 切分流程</h4><h4 id="6、RowKey设计"><a href="#6、RowKey设计" class="headerlink" title="6、RowKey设计"></a>6、RowKey设计</h4><h2 id="HBASE-和-Phoenix结合"><a href="#HBASE-和-Phoenix结合" class="headerlink" title="HBASE 和 Phoenix结合"></a>HBASE 和 Phoenix结合</h2><ul>
+<li>版本选择：phoenix-5.0.0-HBASE-2.0-bin</li>
+<li>这个可以去查看hbase高版本的博客，这个是已经部署好了</li>
+</ul>
+<h2 id="DWD层-行为数据"><a href="#DWD层-行为数据" class="headerlink" title="DWD层-行为数据"></a>DWD层-行为数据</h2><ul>
+<li>识别新老用户 —&gt; 状态校验、RichProcessFunction富合函数</li>
+<li>侧输出流做数据拆分</li>
+<li>将数据输出到Kafka Topic中（页面日志 —&gt; 主流 | 启动日志、曝光日志 —&gt; 侧输出流）</li>
+<li>业务数据：都是状态编程，行为数据要简单得很多</li>
+</ul>
+<h3 id="1、接收Kafka的数据，并进行转换"><a href="#1、接收Kafka的数据，并进行转换" class="headerlink" title="1、接收Kafka的数据，并进行转换"></a>1、接收Kafka的数据，并进行转换</h3><h4 id="1-1-封装操作Kafka的工具类，并提供获取Kafka消费者的方法"><a href="#1-1-封装操作Kafka的工具类，并提供获取Kafka消费者的方法" class="headerlink" title="1.1 封装操作Kafka的工具类，并提供获取Kafka消费者的方法"></a>1.1 封装操作Kafka的工具类，并提供获取Kafka消费者的方法</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wmy.flink.warehourse.utils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.serialization.SimpleStringSchema;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;</span><br><span class="line"><span class="keyword">import</span> org.apache.kafka.clients.consumer.ConsumerConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ClassName:MyKafkaUtil</span></span><br><span class="line"><span class="comment"> * Package:com.wmy.flink.warehourse.utils</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>:2021/7/13 16:46</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>:数仓开发工程师</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@email</span>:2647716549@qq.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: kafka消费者的工具类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyKafkaUtil</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String KAFKA_SERVER = <span class="string">"yaxin01:9092,yaxin02:9092,yaxin03:9092"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取Kafka Source的方法</span></span><br><span class="line"><span class="comment">     * FlinkKafkaConsumer ---&gt; FlinkKafkaConsumerBase ---&gt; RichParallelSourceFunction</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> topic</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> groupID</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> FlinkKafkaConsumer&lt;String&gt; <span class="title">getKafkaSource</span><span class="params">(String topic,String groupID)</span> </span>{</span><br><span class="line">        <span class="comment">// 1、创建Kafka的配置信息</span></span><br><span class="line">        Properties props = <span class="keyword">new</span> Properties();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、配置kafka消费参数</span></span><br><span class="line">        props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_SERVER);</span><br><span class="line">        props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupID);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、获取kafkaSource</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> FlinkKafkaConsumer&lt;String&gt;(topic, <span class="keyword">new</span> SimpleStringSchema(), props);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-2-读取kafka的数据进行新老用户的处理"><a href="#1-2-读取kafka的数据进行新老用户的处理" class="headerlink" title="1.2 读取kafka的数据进行新老用户的处理"></a>1.2 读取kafka的数据进行新老用户的处理</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wmy.flink.warehourse.app.dwd;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> com.wmy.flink.warehourse.utils.MyKafkaUtil;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.functions.RichMapFunction;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.state.ValueState;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.state.ValueStateDescriptor;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.configuration.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.runtime.state.filesystem.FsStateBackend;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.CheckpointingMode;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.DataStreamSource;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.KeyedStream;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ClassName:LogBaseApp</span></span><br><span class="line"><span class="comment"> * Package:com.wmy.flink.warehourse.app.dwd</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>:2021/7/13 16:22</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>:数仓开发工程师</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@email</span>:2647716549@qq.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 接收Kafka的数据，并进行转换</span></span><br><span class="line"><span class="comment"> * 1) 封装操作Kafka的工具类，并提供获取Kafka消费者的方法</span></span><br><span class="line"><span class="comment"> * 测试Kafka数据读取问题</span></span><br><span class="line"><span class="comment"> *  a）启动集群：Zookeeper\Kafka\HDFS</span></span><br><span class="line"><span class="comment"> *  b）启动Kafka生产者：kafka-console-producer.sh --broker-list yaxin01:9092 --topic ods_base_log</span></span><br><span class="line"><span class="comment"> *  c）测试数据：{"common":{"ar":"110000","uid":"7","os":"Android 11.0","ch":"xiaomi","is_new":"1","md":"Xiaomi 9","mid":"mid_41","vc":"v2.1.132","vc":"v2.1.134","ba":"Xiaomi"},"start":{"entry":"icon","loading_time":7815,"open_ad_id":8,"open_ad_ms":7872,"open_ad_skip_ms":6115},"ts":1592175234000}</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LogBaseApp</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注意：会出现一个没有权限的错误</span></span><br><span class="line">        System.setProperty(<span class="string">"HADOOP_USER_NAME"</span>, <span class="string">"root"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1、获取执行环境，设置并行度，设置状态后端（HDFS）、checkpoint，local模式是不能设置状态恢复的</span></span><br><span class="line">        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();</span><br><span class="line">        env.setParallelism(<span class="number">1</span>); <span class="comment">// kafka topic partitions nums</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.1 设置状态后端</span></span><br><span class="line">        env.setStateBackend(<span class="keyword">new</span> FsStateBackend(<span class="string">"hdfs://yaxin01:9820/flink-realtime-warehourse/dwd"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.2 开启CheckPoint的</span></span><br><span class="line">        env.enableCheckpointing(<span class="number">10000L</span>, CheckpointingMode.EXACTLY_ONCE); <span class="comment">// 每隔多少时间开启checkpoint</span></span><br><span class="line">        env.getCheckpointConfig().setCheckpointTimeout(<span class="number">60000L</span>); <span class="comment">// 超时时间为一分钟</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、读取kafka_ods_base_log 主题数据</span></span><br><span class="line">        <span class="comment">// 2.1 封装一个消费Kafka的工具类</span></span><br><span class="line">        FlinkKafkaConsumer&lt;String&gt; kafkaSource = MyKafkaUtil.getKafkaSource(<span class="string">"ods_base_log"</span>, <span class="string">"dwd_log"</span>);</span><br><span class="line">        DataStreamSource&lt;String&gt; kafkaDS = env.addSource(kafkaSource);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、将每行数据转换为JsonObject</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; jsonObjectDS = kafkaDS.map(JSON::parseObject);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4、按照ID分组</span></span><br><span class="line">        KeyedStream&lt;JSONObject, String&gt; keyedStream = jsonObjectDS.keyBy(data -&gt; data.getJSONObject(<span class="string">"common"</span>).getString(<span class="string">"mid"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5、使用状态做新老用户校验 ---&gt; 使用复合函数</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; jsonWithNewFlagDS = keyedStream.map(<span class="keyword">new</span> NewMidRichMapFunc());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印测试</span></span><br><span class="line">        jsonWithNewFlagDS.print();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6、分流，使用ProcessFunction将ODS数据拆分成启动、曝光以及页面数据</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 7、将三个流的数据写入到对应的Kafka主题</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 8、执行任务</span></span><br><span class="line">        env.execute(<span class="string">"read kafka source write kafka topic ... "</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 做一个字段的校验</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">NewMidRichMapFunc</span> <span class="keyword">extends</span> <span class="title">RichMapFunction</span>&lt;<span class="title">JSONObject</span>,<span class="title">JSONObject</span>&gt; </span>{</span><br><span class="line">        <span class="comment">// 声明状态，用于表示当前mid是否以及访问过</span></span><br><span class="line">        <span class="keyword">private</span> ValueState&lt;String&gt; firstVisitDateState;</span><br><span class="line">        <span class="keyword">private</span> SimpleDateFormat simpleDateFormat;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">(Configuration parameters)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            firstVisitDateState = getRuntimeContext().getState(<span class="keyword">new</span> ValueStateDescriptor&lt;String&gt;(<span class="string">"new-mid"</span>, String.class));</span><br><span class="line">            simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> JSONObject <span class="title">map</span><span class="params">(JSONObject value)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            <span class="comment">// 取出新用户标记</span></span><br><span class="line">            String isNew = value.getJSONObject(<span class="string">"common"</span>).getString(<span class="string">"is_new"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前前端传输数据表示为新用户，则进行校验</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"1"</span>.equals(isNew)) {</span><br><span class="line">                <span class="comment">// 取出状态数据，并取出当前访问时间</span></span><br><span class="line">                String firstDate = firstVisitDateState.value();</span><br><span class="line">                Long ts = value.getLong(<span class="string">"ts"</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 判断状态数据是否为null</span></span><br><span class="line">                <span class="keyword">if</span> (firstDate != <span class="keyword">null</span>) {</span><br><span class="line">                    <span class="comment">// 修复</span></span><br><span class="line">                    value.getJSONObject(<span class="string">"common"</span>).put(<span class="string">"is_new"</span>, <span class="number">0</span>);</span><br><span class="line">                } <span class="keyword">else</span> {</span><br><span class="line">                    <span class="comment">// 更新数据</span></span><br><span class="line">                    firstVisitDateState.update(simpleDateFormat.format(ts));</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">return</span> value;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-3-测试数据"><a href="#1-3-测试数据" class="headerlink" title="1.3 测试数据"></a>1.3 测试数据</h4><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"110000"</span>,<span class="attr">"uid"</span>:<span class="string">"7"</span>,<span class="attr">"os"</span>:<span class="string">"Android 11.0"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"is_new"</span>:<span class="string">"1"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 9"</span>,<span class="attr">"mid"</span>:<span class="string">"mid_41"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.132"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>},<span class="attr">"start"</span>:{<span class="attr">"entry"</span>:<span class="string">"icon"</span>,<span class="attr">"loading_time"</span>:<span class="number">7815</span>,<span class="attr">"open_ad_id"</span>:<span class="number">8</span>,<span class="attr">"open_ad_ms"</span>:<span class="number">7872</span>,<span class="attr">"open_ad_skip_ms"</span>:<span class="number">6115</span>},<span class="attr">"ts"</span>:<span class="number">1592175234000</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210713173720628.png" alt="kafka生产数据"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210713173745167.png" alt="idea运行结果"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210713173847564.png" alt="Flink任务设置 状态后端的数据"></p>
+<h4 id="1-4-读取Kafka数据经过新老用户处理之后进行分流操作"><a href="#1-4-读取Kafka数据经过新老用户处理之后进行分流操作" class="headerlink" title="1.4 读取Kafka数据经过新老用户处理之后进行分流操作"></a>1.4 读取Kafka数据经过新老用户处理之后进行分流操作</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wmy.flink.warehourse.app.dwd;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONArray;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> com.wmy.flink.warehourse.utils.MyKafkaUtil;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.functions.RichMapFunction;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.state.ValueState;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.state.ValueStateDescriptor;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.configuration.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.runtime.state.filesystem.FsStateBackend;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.CheckpointingMode;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.DataStream;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.DataStreamSource;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.KeyedStream;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.functions.ProcessFunction;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.util.Collector;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.util.OutputTag;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ClassName:LogBaseApp</span></span><br><span class="line"><span class="comment"> * Package:com.wmy.flink.warehourse.app.dwd</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>:2021/7/13 16:22</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>:数仓开发工程师</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@email</span>:2647716549@qq.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 接收Kafka的数据，并进行转换</span></span><br><span class="line"><span class="comment"> * 1) 封装操作Kafka的工具类，并提供获取Kafka消费者的方法</span></span><br><span class="line"><span class="comment"> * 测试Kafka数据读取问题</span></span><br><span class="line"><span class="comment"> *  a）启动集群：Zookeeper\Kafka\HDFS</span></span><br><span class="line"><span class="comment"> *  b）启动Kafka生产者：kafka-console-producer.sh --broker-list yaxin01:9092 --topic ods_base_log</span></span><br><span class="line"><span class="comment"> *  c）测试数据：{"common":{"ar":"110000","uid":"7","os":"Android 11.0","ch":"xiaomi","is_new":"1","md":"Xiaomi 9","mid":"mid_41","vc":"v2.1.132","vc":"v2.1.134","ba":"Xiaomi"},"start":{"entry":"icon","loading_time":7815,"open_ad_id":8,"open_ad_ms":7872,"open_ad_skip_ms":6115},"ts":1592175234000}</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LogBaseApp</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注意：会出现一个没有权限的错误</span></span><br><span class="line">        System.setProperty(<span class="string">"HADOOP_USER_NAME"</span>, <span class="string">"root"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1、获取执行环境，设置并行度，设置状态后端（HDFS）、checkpoint，local模式是不能设置状态恢复的</span></span><br><span class="line">        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();</span><br><span class="line">        env.setParallelism(<span class="number">1</span>); <span class="comment">// kafka topic partitions nums</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.1 设置状态后端</span></span><br><span class="line">        <span class="comment">//env.setStateBackend(new FsStateBackend("hdfs://yaxin01:9820/flink-realtime-warehourse/dwd"));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.2 开启CheckPoint的</span></span><br><span class="line">        <span class="comment">//env.enableCheckpointing(10000L, CheckpointingMode.EXACTLY_ONCE); // 每隔多少时间开启checkpoint</span></span><br><span class="line">        <span class="comment">//env.getCheckpointConfig().setCheckpointTimeout(60000L); // 超时时间为一分钟</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、读取kafka_ods_base_log 主题数据</span></span><br><span class="line">        <span class="comment">// 2.1 封装一个消费Kafka的工具类</span></span><br><span class="line">        FlinkKafkaConsumer&lt;String&gt; kafkaSource = MyKafkaUtil.getKafkaSource(<span class="string">"ods_base_log"</span>, <span class="string">"dwd_log"</span>);</span><br><span class="line">        DataStreamSource&lt;String&gt; kafkaDS = env.addSource(kafkaSource);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、将每行数据转换为JsonObject</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; jsonObjectDS = kafkaDS.map(JSON::parseObject);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4、按照ID分组</span></span><br><span class="line">        KeyedStream&lt;JSONObject, String&gt; keyedStream = jsonObjectDS.keyBy(data -&gt; data.getJSONObject(<span class="string">"common"</span>).getString(<span class="string">"mid"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5、使用状态做新老用户校验 ---&gt; 使用复合函数</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; jsonWithNewFlagDS = keyedStream.map(<span class="keyword">new</span> NewMidRichMapFunc());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印测试</span></span><br><span class="line">        <span class="comment">//jsonWithNewFlagDS.print();</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6、分流，使用ProcessFunction将ODS数据拆分成启动、曝光以及页面数据</span></span><br><span class="line">        SingleOutputStreamOperator&lt;String&gt; pageDS = jsonWithNewFlagDS.process(<span class="keyword">new</span> SpiltProcessFunc());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 7、将三个流的数据写入到对应的Kafka主题</span></span><br><span class="line">        DataStream&lt;String&gt; startDS = pageDS.getSideOutput(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"start"</span>) {</span><br><span class="line">        });</span><br><span class="line">        DataStream&lt;String&gt; displayDS = pageDS.getSideOutput(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"display"</span>) {</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印测试</span></span><br><span class="line">        pageDS.print(<span class="string">"page &gt;&gt;&gt;&gt;&gt;&gt;&gt; "</span>);</span><br><span class="line">        startDS.print(<span class="string">"start &gt;&gt;&gt;&gt;&gt;&gt;&gt; "</span>);</span><br><span class="line">        displayDS.print(<span class="string">"display &gt;&gt;&gt;&gt;&gt;&gt;&gt; "</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 8、执行任务</span></span><br><span class="line">        env.execute(<span class="string">"read kafka source write kafka topic ... "</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 做一个字段的校验</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">NewMidRichMapFunc</span> <span class="keyword">extends</span> <span class="title">RichMapFunction</span>&lt;<span class="title">JSONObject</span>,<span class="title">JSONObject</span>&gt; </span>{</span><br><span class="line">        <span class="comment">// 声明状态，用于表示当前mid是否以及访问过</span></span><br><span class="line">        <span class="keyword">private</span> ValueState&lt;String&gt; firstVisitDateState;</span><br><span class="line">        <span class="keyword">private</span> SimpleDateFormat simpleDateFormat;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">(Configuration parameters)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            firstVisitDateState = getRuntimeContext().getState(<span class="keyword">new</span> ValueStateDescriptor&lt;String&gt;(<span class="string">"new-mid"</span>, String.class));</span><br><span class="line">            simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> JSONObject <span class="title">map</span><span class="params">(JSONObject value)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            <span class="comment">// 取出新用户标记</span></span><br><span class="line">            String isNew = value.getJSONObject(<span class="string">"common"</span>).getString(<span class="string">"is_new"</span>);</span><br><span class="line">            <span class="comment">// 如果当前前端传输数据表示为新用户，则进行校验</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"1"</span>.equals(isNew)) {</span><br><span class="line">                <span class="comment">// 取出状态数据，并取出当前访问时间</span></span><br><span class="line">                String firstDate = firstVisitDateState.value();</span><br><span class="line">                Long ts = value.getLong(<span class="string">"ts"</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 判断状态数据是否为null</span></span><br><span class="line">                <span class="keyword">if</span> (firstDate != <span class="keyword">null</span>) {</span><br><span class="line">                    <span class="comment">// 修复</span></span><br><span class="line">                    value.getJSONObject(<span class="string">"common"</span>).put(<span class="string">"is_new"</span>, <span class="number">0</span>);</span><br><span class="line">                } <span class="keyword">else</span> {</span><br><span class="line">                    <span class="comment">// 更新数据</span></span><br><span class="line">                    firstVisitDateState.update(simpleDateFormat.format(ts));</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">return</span> value;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将数据分流到kafka中</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SpiltProcessFunc</span> <span class="keyword">extends</span> <span class="title">ProcessFunction</span>&lt;<span class="title">JSONObject</span>,<span class="title">String</span>&gt;</span>{</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processElement</span><span class="params">(JSONObject value, Context ctx, Collector&lt;String&gt; out)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            <span class="comment">// 提前"start字段"</span></span><br><span class="line">            String startStr = value.getString(<span class="string">"start"</span>);</span><br><span class="line">            <span class="comment">// 判断是否为启动数据</span></span><br><span class="line">            <span class="keyword">if</span> (startStr != <span class="keyword">null</span> &amp;&amp; startStr.length() &gt; <span class="number">0</span>) {</span><br><span class="line">                <span class="comment">// 将启动日志输出到侧输出流</span></span><br><span class="line">                ctx.output(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"start"</span>){}, value.toString());</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="comment">// 不是启动日志，继续判断是否是曝光数据</span></span><br><span class="line">                JSONArray displays = value.getJSONArray(<span class="string">"displays"</span>);</span><br><span class="line">                <span class="keyword">if</span> (displays != <span class="keyword">null</span> &amp;&amp; displays.size() &gt; <span class="number">0</span>) {</span><br><span class="line">                    <span class="comment">// 曝光数据，是一个数组类型的，遍历写入侧输出流</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; displays.size(); i++) {</span><br><span class="line">                        <span class="comment">// 取出单条曝光数据</span></span><br><span class="line">                        JSONObject displayJson = displays.getJSONObject(i);</span><br><span class="line">                        <span class="comment">// 添加页面ID</span></span><br><span class="line">                        displayJson.put(<span class="string">"page_id"</span>, value.getJSONObject(<span class="string">"page"</span>).getString(<span class="string">"page_id"</span>));</span><br><span class="line">                        <span class="comment">// 输出到侧输出流中</span></span><br><span class="line">                        ctx.output(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"display"</span>){}, displayJson.toString());</span><br><span class="line">                    }</span><br><span class="line">                } <span class="keyword">else</span> {</span><br><span class="line">                    <span class="comment">// 页面数据，将数据输出到主流，主流使用collect</span></span><br><span class="line">                    out.collect(value.toString());</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-5-测试数据"><a href="#1-5-测试数据" class="headerlink" title="1.5 测试数据"></a>1.5 测试数据</h4><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 启动日志</span><br><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_7"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>},<span class="attr">"start"</span>:{<span class="attr">"entry"</span>:<span class="string">"icon"</span>,<span class="attr">"loading_time"</span>:<span class="number">15351</span>,<span class="attr">"open_ad_id"</span>:<span class="number">19</span>,<span class="attr">"open_ad_ms"</span>:<span class="number">8660</span>,<span class="attr">"open_ad_skip_ms"</span>:<span class="number">0</span>},<span class="attr">"ts"</span>:<span class="number">1592179997000</span>}</span><br><span class="line"></span><br><span class="line">-- 曝光数据</span><br><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_7"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>},<span class="attr">"displays"</span>:[{<span class="attr">"display_type"</span>:<span class="string">"activity"</span>,<span class="attr">"item"</span>:<span class="string">"2"</span>,<span class="attr">"item_type"</span>:<span class="string">"activity_id"</span>,<span class="attr">"order"</span>:<span class="number">1</span>},{<span class="attr">"display_type"</span>:<span class="string">"promotion"</span>,<span class="attr">"item"</span>:<span class="string">"9"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">2</span>},{<span class="attr">"display_type"</span>:<span class="string">"promotion"</span>,<span class="attr">"item"</span>:<span class="string">"7"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">3</span>},{<span class="attr">"display_type"</span>:<span class="string">"promotion"</span>,<span class="attr">"item"</span>:<span class="string">"9"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">4</span>},{<span class="attr">"display_type"</span>:<span class="string">"recommend"</span>,<span class="attr">"item"</span>:<span class="string">"1"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">5</span>},{<span class="attr">"display_type"</span>:<span class="string">"query"</span>,<span class="attr">"item"</span>:<span class="string">"8"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">6</span>}],<span class="attr">"page"</span>:{<span class="attr">"during_time"</span>:<span class="number">18532</span>,<span class="attr">"page_id"</span>:<span class="string">"home"</span>},<span class="attr">"ts"</span>:<span class="number">1592180012351</span>}</span><br><span class="line"></span><br><span class="line">-- 页面数据</span><br><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_7"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>},<span class="attr">"page"</span>:{<span class="attr">"during_time"</span>:<span class="number">19041</span>,<span class="attr">"item"</span>:<span class="string">"联想"</span>,<span class="attr">"item_type"</span>:<span class="string">"keyword"</span>,<span class="attr">"last_page_id"</span>:<span class="string">"home"</span>,<span class="attr">"page_id"</span>:<span class="string">"good_list"</span>},<span class="attr">"ts"</span>:<span class="number">1592180030883</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-6-运行程序"><a href="#1-6-运行程序" class="headerlink" title="1.6 运行程序"></a>1.6 运行程序</h4><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210713180831911.png" alt="数据输入"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210713180854396.png" alt="Idea结果展示"></p>
+<h4 id="1-7-将行为数据分流写入kafka"><a href="#1-7-将行为数据分流写入kafka" class="headerlink" title="1.7 将行为数据分流写入kafka"></a>1.7 将行为数据分流写入kafka</h4><h5 id="1-7-1-LogBaseApp"><a href="#1-7-1-LogBaseApp" class="headerlink" title="1.7.1 LogBaseApp"></a>1.7.1 LogBaseApp</h5><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wmy.flink.warehourse.app.dwd;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONArray;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> com.wmy.flink.warehourse.utils.MyKafkaUtil;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.functions.RichMapFunction;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.state.ValueState;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.state.ValueStateDescriptor;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.configuration.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.runtime.state.filesystem.FsStateBackend;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.CheckpointingMode;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.DataStream;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.DataStreamSource;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.KeyedStream;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.functions.ProcessFunction;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.util.Collector;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.util.OutputTag;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ClassName:LogBaseApp</span></span><br><span class="line"><span class="comment"> * Package:com.wmy.flink.warehourse.app.dwd</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>:2021/7/13 16:22</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>:数仓开发工程师</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@email</span>:2647716549@qq.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 接收Kafka的数据，并进行转换</span></span><br><span class="line"><span class="comment"> * 1) 封装操作Kafka的工具类，并提供获取Kafka消费者的方法</span></span><br><span class="line"><span class="comment"> * 测试Kafka数据读取问题</span></span><br><span class="line"><span class="comment"> *  a）启动集群：Zookeeper\Kafka\HDFS</span></span><br><span class="line"><span class="comment"> *  b）启动Kafka生产者：kafka-console-producer.sh --broker-list yaxin01:9092 --topic ods_base_log</span></span><br><span class="line"><span class="comment"> *  c）测试数据：{"common":{"ar":"110000","uid":"7","os":"Android 11.0","ch":"xiaomi","is_new":"1","md":"Xiaomi 9","mid":"mid_41","vc":"v2.1.132","vc":"v2.1.134","ba":"Xiaomi"},"start":{"entry":"icon","loading_time":7815,"open_ad_id":8,"open_ad_ms":7872,"open_ad_skip_ms":6115},"ts":1592175234000}</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LogBaseApp</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注意：会出现一个没有权限的错误</span></span><br><span class="line">        System.setProperty(<span class="string">"HADOOP_USER_NAME"</span>, <span class="string">"root"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1、获取执行环境，设置并行度，设置状态后端（HDFS）、checkpoint，local模式是不能设置状态恢复的</span></span><br><span class="line">        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();</span><br><span class="line">        env.setParallelism(<span class="number">1</span>); <span class="comment">// kafka topic partitions nums</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.1 设置状态后端</span></span><br><span class="line">        <span class="comment">//env.setStateBackend(new FsStateBackend("hdfs://yaxin01:9820/flink-realtime-warehourse/dwd"));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.2 开启CheckPoint的</span></span><br><span class="line">        <span class="comment">//env.enableCheckpointing(10000L, CheckpointingMode.EXACTLY_ONCE); // 每隔多少时间开启checkpoint</span></span><br><span class="line">        <span class="comment">//env.getCheckpointConfig().setCheckpointTimeout(60000L); // 超时时间为一分钟</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、读取kafka_ods_base_log 主题数据</span></span><br><span class="line">        <span class="comment">// 2.1 封装一个消费Kafka的工具类</span></span><br><span class="line">        FlinkKafkaConsumer&lt;String&gt; kafkaSource = MyKafkaUtil.getKafkaSource(<span class="string">"ods_base_log"</span>, <span class="string">"dwd_log"</span>);</span><br><span class="line">        DataStreamSource&lt;String&gt; kafkaDS = env.addSource(kafkaSource);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、将每行数据转换为JsonObject</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; jsonObjectDS = kafkaDS.map(JSON::parseObject);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4、按照ID分组</span></span><br><span class="line">        KeyedStream&lt;JSONObject, String&gt; keyedStream = jsonObjectDS.keyBy(data -&gt; data.getJSONObject(<span class="string">"common"</span>).getString(<span class="string">"mid"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5、使用状态做新老用户校验 ---&gt; 使用复合函数</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; jsonWithNewFlagDS = keyedStream.map(<span class="keyword">new</span> NewMidRichMapFunc());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印测试</span></span><br><span class="line">        <span class="comment">//jsonWithNewFlagDS.print();</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6、分流，使用ProcessFunction将ODS数据拆分成启动、曝光以及页面数据</span></span><br><span class="line">        SingleOutputStreamOperator&lt;String&gt; pageDS = jsonWithNewFlagDS.process(<span class="keyword">new</span> SpiltProcessFunc());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 7、将三个流的数据写入到对应的Kafka主题</span></span><br><span class="line">        DataStream&lt;String&gt; startDS = pageDS.getSideOutput(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"start"</span>) {</span><br><span class="line">        });</span><br><span class="line">        DataStream&lt;String&gt; displayDS = pageDS.getSideOutput(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"display"</span>) {</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印测试</span></span><br><span class="line">        <span class="comment">//pageDS.print("page &gt;&gt;&gt;&gt;&gt;&gt;&gt; ");</span></span><br><span class="line">        <span class="comment">//startDS.print("start &gt;&gt;&gt;&gt;&gt;&gt;&gt; ");</span></span><br><span class="line">        <span class="comment">//displayDS.print("display &gt;&gt;&gt;&gt;&gt;&gt;&gt; ");</span></span><br><span class="line"></span><br><span class="line">        pageDS.addSink(MyKafkaUtil.getKafkaSink(<span class="string">"dwd_page_log"</span>));</span><br><span class="line">        startDS.addSink(MyKafkaUtil.getKafkaSink(<span class="string">"dwd_start_log"</span>));</span><br><span class="line">        displayDS.addSink(MyKafkaUtil.getKafkaSink(<span class="string">"dwd_display_log"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 8、执行任务</span></span><br><span class="line">        env.execute(<span class="string">"read kafka source write kafka topic ... "</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 做一个字段的校验</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">NewMidRichMapFunc</span> <span class="keyword">extends</span> <span class="title">RichMapFunction</span>&lt;<span class="title">JSONObject</span>,<span class="title">JSONObject</span>&gt; </span>{</span><br><span class="line">        <span class="comment">// 声明状态，用于表示当前mid是否以及访问过</span></span><br><span class="line">        <span class="keyword">private</span> ValueState&lt;String&gt; firstVisitDateState;</span><br><span class="line">        <span class="keyword">private</span> SimpleDateFormat simpleDateFormat;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">(Configuration parameters)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            firstVisitDateState = getRuntimeContext().getState(<span class="keyword">new</span> ValueStateDescriptor&lt;String&gt;(<span class="string">"new-mid"</span>, String.class));</span><br><span class="line">            simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> JSONObject <span class="title">map</span><span class="params">(JSONObject value)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            <span class="comment">// 取出新用户标记</span></span><br><span class="line">            String isNew = value.getJSONObject(<span class="string">"common"</span>).getString(<span class="string">"is_new"</span>);</span><br><span class="line">            <span class="comment">// 如果当前前端传输数据表示为新用户，则进行校验</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"1"</span>.equals(isNew)) {</span><br><span class="line">                <span class="comment">// 取出状态数据，并取出当前访问时间</span></span><br><span class="line">                String firstDate = firstVisitDateState.value();</span><br><span class="line">                Long ts = value.getLong(<span class="string">"ts"</span>);</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 判断状态数据是否为null</span></span><br><span class="line">                <span class="keyword">if</span> (firstDate != <span class="keyword">null</span>) {</span><br><span class="line">                    <span class="comment">// 修复</span></span><br><span class="line">                    value.getJSONObject(<span class="string">"common"</span>).put(<span class="string">"is_new"</span>, <span class="number">0</span>);</span><br><span class="line">                } <span class="keyword">else</span> {</span><br><span class="line">                    <span class="comment">// 更新数据</span></span><br><span class="line">                    firstVisitDateState.update(simpleDateFormat.format(ts));</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">return</span> value;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将数据分流到kafka中</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SpiltProcessFunc</span> <span class="keyword">extends</span> <span class="title">ProcessFunction</span>&lt;<span class="title">JSONObject</span>,<span class="title">String</span>&gt;</span>{</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processElement</span><span class="params">(JSONObject value, Context ctx, Collector&lt;String&gt; out)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">            <span class="comment">// 提前"start字段"</span></span><br><span class="line">            String startStr = value.getString(<span class="string">"start"</span>);</span><br><span class="line">            <span class="comment">// 判断是否为启动数据</span></span><br><span class="line">            <span class="keyword">if</span> (startStr != <span class="keyword">null</span> &amp;&amp; startStr.length() &gt; <span class="number">0</span>) {</span><br><span class="line">                <span class="comment">// 将启动日志输出到侧输出流</span></span><br><span class="line">                ctx.output(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"start"</span>){}, value.toString());</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="comment">// 不是启动日志，继续判断是否是曝光数据</span></span><br><span class="line">                JSONArray displays = value.getJSONArray(<span class="string">"displays"</span>);</span><br><span class="line">                <span class="keyword">if</span> (displays != <span class="keyword">null</span> &amp;&amp; displays.size() &gt; <span class="number">0</span>) {</span><br><span class="line">                    <span class="comment">// 曝光数据，是一个数组类型的，遍历写入侧输出流</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; displays.size(); i++) {</span><br><span class="line">                        <span class="comment">// 取出单条曝光数据</span></span><br><span class="line">                        JSONObject displayJson = displays.getJSONObject(i);</span><br><span class="line">                        <span class="comment">// 添加页面ID</span></span><br><span class="line">                        displayJson.put(<span class="string">"page_id"</span>, value.getJSONObject(<span class="string">"page"</span>).getString(<span class="string">"page_id"</span>));</span><br><span class="line">                        <span class="comment">// 输出到侧输出流中</span></span><br><span class="line">                        ctx.output(<span class="keyword">new</span> OutputTag&lt;String&gt;(<span class="string">"display"</span>){}, displayJson.toString());</span><br><span class="line">                    }</span><br><span class="line">                } <span class="keyword">else</span> {</span><br><span class="line">                    <span class="comment">// 页面数据，将数据输出到主流，主流使用collect</span></span><br><span class="line">                    out.collect(value.toString());</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="1-7-2-MyKafkaUtil"><a href="#1-7-2-MyKafkaUtil" class="headerlink" title="1.7.2 MyKafkaUtil"></a>1.7.2 MyKafkaUtil</h5><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wmy.flink.warehourse.utils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.serialization.SimpleStringSchema;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;</span><br><span class="line"><span class="keyword">import</span> org.apache.kafka.clients.consumer.ConsumerConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ClassName:MyKafkaUtil</span></span><br><span class="line"><span class="comment"> * Package:com.wmy.flink.warehourse.utils</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>:2021/7/13 16:46</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>:数仓开发工程师</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@email</span>:2647716549@qq.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: kafka消费者的工具类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyKafkaUtil</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String KAFKA_SERVER = <span class="string">"yaxin01:9092,yaxin02:9092,yaxin03:9092"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Properties props = <span class="keyword">new</span> Properties();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> {</span><br><span class="line">        props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_SERVER);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取Kafka Source的方法</span></span><br><span class="line"><span class="comment">     * FlinkKafkaConsumer ---&gt; FlinkKafkaConsumerBase ---&gt; RichParallelSourceFunction</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> topic</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> groupID</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> FlinkKafkaConsumer&lt;String&gt; <span class="title">getKafkaSource</span><span class="params">(String topic,String groupID)</span> </span>{</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1、配置kafka消费参数</span></span><br><span class="line">        props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupID);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、获取kafkaSource</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> FlinkKafkaConsumer&lt;String&gt;(topic, <span class="keyword">new</span> SimpleStringSchema(), props);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> FlinkKafkaProducer&lt;String&gt; <span class="title">getKafkaSink</span><span class="params">(String topic)</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> FlinkKafkaProducer&lt;String&gt;(topic, <span class="keyword">new</span> SimpleStringSchema(), props);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="1-7-3-测试数据"><a href="#1-7-3-测试数据" class="headerlink" title="1.7.3 测试数据"></a>1.7.3 测试数据</h5><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 启动日志</span><br><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_7"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>},<span class="attr">"start"</span>:{<span class="attr">"entry"</span>:<span class="string">"icon"</span>,<span class="attr">"loading_time"</span>:<span class="number">15351</span>,<span class="attr">"open_ad_id"</span>:<span class="number">19</span>,<span class="attr">"open_ad_ms"</span>:<span class="number">8660</span>,<span class="attr">"open_ad_skip_ms"</span>:<span class="number">0</span>},<span class="attr">"ts"</span>:<span class="number">1592179997000</span>}</span><br><span class="line"></span><br><span class="line">-- 曝光数据</span><br><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_7"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>},<span class="attr">"displays"</span>:[{<span class="attr">"display_type"</span>:<span class="string">"activity"</span>,<span class="attr">"item"</span>:<span class="string">"2"</span>,<span class="attr">"item_type"</span>:<span class="string">"activity_id"</span>,<span class="attr">"order"</span>:<span class="number">1</span>},{<span class="attr">"display_type"</span>:<span class="string">"promotion"</span>,<span class="attr">"item"</span>:<span class="string">"9"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">2</span>},{<span class="attr">"display_type"</span>:<span class="string">"promotion"</span>,<span class="attr">"item"</span>:<span class="string">"7"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">3</span>},{<span class="attr">"display_type"</span>:<span class="string">"promotion"</span>,<span class="attr">"item"</span>:<span class="string">"9"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">4</span>},{<span class="attr">"display_type"</span>:<span class="string">"recommend"</span>,<span class="attr">"item"</span>:<span class="string">"1"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">5</span>},{<span class="attr">"display_type"</span>:<span class="string">"query"</span>,<span class="attr">"item"</span>:<span class="string">"8"</span>,<span class="attr">"item_type"</span>:<span class="string">"sku_id"</span>,<span class="attr">"order"</span>:<span class="number">6</span>}],<span class="attr">"page"</span>:{<span class="attr">"during_time"</span>:<span class="number">18532</span>,<span class="attr">"page_id"</span>:<span class="string">"home"</span>},<span class="attr">"ts"</span>:<span class="number">1592180012351</span>}</span><br><span class="line"></span><br><span class="line">-- 页面数据</span><br><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_7"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>},<span class="attr">"page"</span>:{<span class="attr">"during_time"</span>:<span class="number">19041</span>,<span class="attr">"item"</span>:<span class="string">"联想"</span>,<span class="attr">"item_type"</span>:<span class="string">"keyword"</span>,<span class="attr">"last_page_id"</span>:<span class="string">"home"</span>,<span class="attr">"page_id"</span>:<span class="string">"good_list"</span>},<span class="attr">"ts"</span>:<span class="number">1592180030883</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="1-7-4-展示结果"><a href="#1-7-4-展示结果" class="headerlink" title="1.7.4 展示结果"></a>1.7.4 展示结果</h5><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210713194135844.png" alt="结果展示"></p>
+<h4 id="1-8-测试问题说明"><a href="#1-8-测试问题说明" class="headerlink" title="1.8 测试问题说明"></a>1.8 测试问题说明</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">checkpoint：出现异常就会自动重启</span></span><br><span class="line"></span><br><span class="line"><span class="attr">就是如果出现了脏数据的情况下或者解析数据失败，并不会立即的退出程序，而是处于无限的循环的状态</span></span><br><span class="line"><span class="attr">所以我们为了要保证集群的稳定性，最好是要设置重启失败的策略</span></span><br><span class="line"></span><br><span class="line"><span class="meta">官网地址：https</span>:<span class="string">//ci.apache.org/projects/flink/flink-docs-release-1.13/docs/deployment/config/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">和重启策略有关系</span></span><br><span class="line"><span class="meta">env.setRestartStrategy(RestartStrategies.fixedDelayRestart(3,</span> <span class="string">Time.seconds(1)));</span></span><br><span class="line"></span><br><span class="line"><span class="attr">在实际生成中最好都是要开启状态后端，checkpoint和重启策略的</span></span><br><span class="line"><span class="attr">env.setRestartStrategy(RestartStrategies.noRestart());</span></span><br><span class="line"></span><br><span class="line"><span class="attr">我们可以捕获异常，这样把脏数据给过滤掉</span></span><br><span class="line"></span><br><span class="line"><span class="attr">也可以看一个脏数据的比例和分析脏数据的缘由来提升程序的健壮性</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210713200208957.png" alt="官网介绍重启策略"></p>
+<h3 id="2、DWD层（行为数据-整体测试）"><a href="#2、DWD层（行为数据-整体测试）" class="headerlink" title="2、DWD层（行为数据 整体测试）"></a>2、DWD层（行为数据 整体测试）</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">日志数据DWD层测试所需进程</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Mock、Nginx、Logger、Kafka(ZK)、Flink_APP(HDFS\kafka)、三台消费者</span></span><br><span class="line"></span><br><span class="line"><span class="attr">dwd_page_log</span></span><br><span class="line"><span class="attr">dwd_start_log</span></span><br><span class="line"><span class="attr">dwd_display_log</span></span><br><span class="line"></span><br><span class="line"><span class="attr">主要是读取kafka数据进行，然后在进行分流</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="DWD层-业务数据"><a href="#DWD层-业务数据" class="headerlink" title="DWD层-业务数据"></a>DWD层-业务数据</h2><h3 id="需求说明"><a href="#需求说明" class="headerlink" title="需求说明"></a>需求说明</h3><h4 id="1、业务说明"><a href="#1、业务说明" class="headerlink" title="1、业务说明"></a>1、业务说明</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">业务数据得变化，我们可以通过MaxWell采集到，但是MaxWell是把全部数据统一写入一个topic中，这些数据包括业务数据，也包括维度数据，这样显然不利于日后得数据处理，所以这个功能是从kafka得业务数据ODS层读取数据，经过处理后，将维度数据保存到HBASE，将事实数据写回kafka作为业务数据得DWD层</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="2、接收kafka数据，过滤空值数据"><a href="#2、接收kafka数据，过滤空值数据" class="headerlink" title="2、接收kafka数据，过滤空值数据"></a>2、接收kafka数据，过滤空值数据</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">对maxwell抓取数据进行ETL，有用得部分保留，没有用得部分过滤掉</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="3、实现动态分流"><a href="#3、实现动态分流" class="headerlink" title="3、实现动态分流"></a>3、实现动态分流</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">由于MaxWell是把全部数据统一写入一个topic中，这样显然不利于日后的数据处理，所以需要把各个表拆开处理，但是由于每个表有不同的特点，有些表是维度表，有些表是事实表，有些表既是事实表在某种情况下又是维度表。</span></span><br><span class="line"><span class="attr">在实时计算中一般把维度数据写入一个存储容器中，一般是方便通过主键查询的数据库比如HBASE\REDIS\MYSQL等，一般把事实表写入流中，进行进一步处理，最终形成宽表，但是作为Flink事实计算任务，如何得知那些表是维度表，那些是事实表，而这些表又应该采集那些字段勒？</span></span><br><span class="line"><span class="attr">这样的配置不是和写在配置文件中，因为这样的花，业务端随着雪球变化每增加一张表</span></span><br><span class="line"></span><br><span class="line"><span class="attr">使用配置表的方式是可以不用停机操作的，配置文件中必须是一个外部的配置文件，而且还需要每隔一段时间就必须要去访问一次，否则万一出现数据的变更，我们使用的是MySQL来进行存储配置数据表，用来加载配置信息，配置信息还不能写死，代码中还必须使用一个定时任务，Spark源码中，master以一个固定的时间来进行校验worker是否超时</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210714103610400.png" alt="如何实现动态分流"></p>
+<h4 id="4、把分好的流保存到对应表、主题中"><a href="#4、把分好的流保存到对应表、主题中" class="headerlink" title="4、把分好的流保存到对应表、主题中"></a>4、把分好的流保存到对应表、主题中</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">1、业务数据保存到Kafka主题中</span></span><br><span class="line"><span class="attr">2、维度数据保存到HBASE的表中</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="1、接收kafka数据，过滤空值数据"><a href="#1、接收kafka数据，过滤空值数据" class="headerlink" title="1、接收kafka数据，过滤空值数据"></a>1、接收kafka数据，过滤空值数据</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.wmy.flink.warehourse.app.dwd;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> com.wmy.flink.warehourse.utils.MyKafkaUtil;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.functions.FilterFunction;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.restartstrategy.RestartStrategies;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.api.common.time.Time;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.runtime.executiongraph.restart.RestartStrategy;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.runtime.state.filesystem.FsStateBackend;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.CheckpointingMode;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.DataStreamSource;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;</span><br><span class="line"><span class="keyword">import</span> org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ClassName:DbBaseApp</span></span><br><span class="line"><span class="comment"> * Package:com.wmy.flink.warehourse.app.dwd</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>:2021/7/14 10:07</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>:数仓开发工程师</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@email</span>:2647716549@qq.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>: 分析业务数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DbBaseApp</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1、获取执行环境</span></span><br><span class="line">        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();</span><br><span class="line">        env.setParallelism(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.1 checkpointn</span></span><br><span class="line">        <span class="comment">//env.setStateBackend(new FsStateBackend("hdfs://yaxin01:9820/flink-realtime-warehourse/dwd"));</span></span><br><span class="line">        <span class="comment">//env.enableCheckpointing(1000L, CheckpointingMode.EXACTLY_ONCE);</span></span><br><span class="line">        <span class="comment">//env.getCheckpointConfig().setCheckpointTimeout(60000L);</span></span><br><span class="line">        <span class="comment">//env.setRestartStrategy(RestartStrategies.fixedDelayRestart(3, Time.seconds(3)));</span></span><br><span class="line">        <span class="comment">//env.setRestartStrategy(RestartStrategies.noRestart());</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、读取Kafka数据</span></span><br><span class="line">        FlinkKafkaConsumer&lt;String&gt; kafkaSource = MyKafkaUtil.getKafkaSource(<span class="string">"ods_base_db_m"</span>, <span class="string">"ods_db_group"</span>);</span><br><span class="line">        DataStreamSource&lt;String&gt; kafkaDS = env.addSource(kafkaSource);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、将每行数据转换为JSON对象</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; jsonObjDS = kafkaDS.map(JSON::parseObject);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4、过滤</span></span><br><span class="line">        SingleOutputStreamOperator&lt;JSONObject&gt; filterDS = jsonObjDS.filter(<span class="keyword">new</span> FilterFunction&lt;JSONObject&gt;() {</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">filter</span><span class="params">(JSONObject value)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">                <span class="comment">// 获取一个data字段{"data":{"id":30,"user_name":"zhangsan","tel":"19845368388"}}</span></span><br><span class="line">                String data = value.getString(<span class="string">"data"</span>);</span><br><span class="line">                <span class="keyword">return</span> data != <span class="keyword">null</span> &amp;&amp; data.length() &gt; <span class="number">0</span>;</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印测试</span></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 测试说明，由于我没有采集那些的数据，没有实时采集MySQL中的数据到kafka中，所以我是直接生产到kafka中</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * 数据：</span></span><br><span class="line"><span class="comment">         * {"database":"gmall","xid":111,"data":{"id":30,"user_name":"zhangsan","tel":"19845368388"}}</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        filterDS.print();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5、分流，ProcessFunction，如果使用状态的可以使用复合函数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6、取出分流输出将数据写入kafka或者phonix</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 7、执行任务</span></span><br><span class="line">        env.execute(<span class="string">"DbBaseApp &gt;&gt;&gt;&gt;&gt;&gt;&gt; "</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210714103832864.png" alt="数据生产"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210714103846987.png" alt="结果展示"></p>
+<h4 id="2、根据MySQL的配置，实现动态分流"><a href="#2、根据MySQL的配置，实现动态分流" class="headerlink" title="2、根据MySQL的配置，实现动态分流"></a>2、根据MySQL的配置，实现动态分流</h4><h5 id="2-1-MySQL配置表的创建"><a href="#2-1-MySQL配置表的创建" class="headerlink" title="2.1 MySQL配置表的创建"></a>2.1 MySQL配置表的创建</h5><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `table_process`(</span><br><span class="line">`source_table` <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">'来源表'</span>,</span><br><span class="line">`operate_type` <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">'操作类型 insert,update,delete'</span>,</span><br><span class="line">`sink_type` <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">'输出类型 hbase kafka'</span>,</span><br><span class="line">`sink_table` <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">'输出表（主题）'</span>,</span><br><span class="line">`sink_columns` <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">'输出字段'</span>,</span><br><span class="line">`sink_pk` <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">'主键字段'</span>,</span><br><span class="line">`sink_extend` <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">'建表扩展'</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`source_table`,`operate_type`)</span><br><span class="line">)engine<span class="operator">=</span>InnoDB <span class="keyword">default</span> charset<span class="operator">=</span>utf8;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210714104619292.png" alt="表的字段设置类型"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210714104635768.png" alt="查看表结构"></p>
+<h5 id="2-2-程序流程分析"><a href="#2-2-程序流程分析" class="headerlink" title="2.2 程序流程分析"></a>2.2 程序流程分析</h5><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210715165318028.png" alt="程序流程分析"></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">open</span>:<span class="string"></span></span><br><span class="line">	<span class="attr">获取数据，如果只是调用一次的，这样的话动态分流就完成不了，停机重启，需要开启一个周期调度任务，这个需要放到open方法里面，open生命周期方法，查询一个配置表（MySQL）</span></span><br><span class="line">	</span><br><span class="line"><span class="attr">hbase/kafka：</span></span><br><span class="line">	<span class="attr">这个主要是看MySQL中的配置信息，如果单条数据</span></span><br><span class="line">	</span><br><span class="line"><span class="meta">checkTable：</span>	<span class="string"></span></span><br><span class="line">	<span class="attr">不需要自己去phoenix，去创建表，是让系统给我们自己去创建表，这样我就不需要一个扩展字段，不存在就创建，存在的话就不创建，跟配置信息MySQL的表相关</span></span><br><span class="line">	</span><br><span class="line"><span class="attr">filterColumn：</span></span><br><span class="line">	<span class="attr">删除一些不需要的字段，到底是要往哪里去写</span></span><br><span class="line">	</span><br><span class="line"><span class="attr">应该是先读取一次性配置信息，然后才开始周期性的去读取这个配置信息</span></span><br><span class="line"></span><br><span class="line"><span class="attr">需要检查并建表</span></span><br><span class="line"></span><br><span class="line"><span class="attr">同步然后在封装在map中，如果这是一个新增的维度信息，感觉把这个表给建立一下</span></span><br><span class="line"><span class="attr">processelement读取配置信息过滤字段，将我们的信息给分流</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h5 id="2-3-程序的测试"><a href="#2-3-程序的测试" class="headerlink" title="2.3 程序的测试"></a>2.3 程序的测试</h5><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">动态获取配置信息以及创建Phoenix测试流程</span></span><br><span class="line"><span class="attr">因为目前我是确实业务数据到kafka这个流程，我直接就是生产到kafka中</span></span><br><span class="line"><span class="attr">进程：zk,kafka,hadoop,hbase,phoenix,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">如果有的同步机制的话，我们是直接在MySQL当中采用binlog日志来进行</span></span><br><span class="line"></span><br><span class="line"><span class="attr">现在我是直接模拟生成最后采集的那个json数据，这些都是手动写的</span></span><br><span class="line"></span><br><span class="line"><span class="attr">需要开启Kafka生成者</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h6 id="2-3-1-模拟同步的日志"><a href="#2-3-1-模拟同步的日志" class="headerlink" title="2.3.1 模拟同步的日志"></a>2.3.1 模拟同步的日志</h6><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{<span class="attr">"database"</span>:<span class="string">"gmall"</span>,<span class="attr">"xid"</span>:<span class="number">305</span>,<span class="attr">"data"</span>:{<span class="attr">"tm_name"</span>:<span class="string">"vivo"</span>,<span class="attr">"log_url"</span>:<span class="string">"https://item.jd.com/100009989503.html"</span>,<span class="attr">"id"</span>:<span class="string">"13"</span>},<span class="attr">"commit"</span>:<span class="literal">true</span>,<span class="attr">"type"</span>:<span class="string">"delete"</span>,<span class="attr">"table"</span>:<span class="string">"base_trademark"</span>,<span class="attr">"ts"</span>:<span class="number">1626346291</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210715221400883.png" alt="结果展示"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210715221420898.png" alt="phoenix展示"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210716001234182.png" alt="展示结果"></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">注意：这个是我们在更新数据库中得东西得时候，主键必须是一致得，否则会报错得，要不然就不会出现结果了</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="3、分流维度数据到HBASE中"><a href="#3、分流维度数据到HBASE中" class="headerlink" title="3、分流维度数据到HBASE中"></a>3、分流维度数据到HBASE中</h4><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{<span class="attr">"database"</span>:<span class="string">"gmall"</span>,<span class="attr">"xid"</span>:<span class="number">5520</span>,<span class="attr">"data"</span>:{<span class="attr">"id"</span>:<span class="string">"28"</span>,<span class="attr">"tm_name"</span>:<span class="string">"vivo"</span>,<span class="attr">"log_url"</span>:<span class="string">"https://item.jd.com/100009989503.html"</span>},<span class="attr">"commit"</span>:<span class="literal">true</span>,<span class="attr">"type"</span>:<span class="string">"insert"</span>,<span class="attr">"table"</span>:<span class="string">"aa"</span>,<span class="attr">"ts"</span>:<span class="number">1626346292</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717103020503.png" alt="MySQL配置信息"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717102951981.png" alt="idea显示结果"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717103140907.png" alt="hbase中的数据"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717103349917.png" alt="动态添加的过程"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717103411066.png" alt="hbase中的数据"></p>
+<h4 id="4、分流事实数据到Kafka中"><a href="#4、分流事实数据到Kafka中" class="headerlink" title="4、分流事实数据到Kafka中"></a>4、分流事实数据到Kafka中</h4><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hbase:</span><br><span class="line"></span><br><span class="line">{<span class="attr">"database"</span>:<span class="string">"gmall"</span>,<span class="attr">"xid"</span>:<span class="number">5520</span>,<span class="attr">"data"</span>:{<span class="attr">"id"</span>:<span class="string">"28"</span>,<span class="attr">"tm_name"</span>:<span class="string">"vivo"</span>,<span class="attr">"log_url"</span>:<span class="string">"https://item.jd.com/100009989503.html"</span>},<span class="attr">"commit"</span>:<span class="literal">true</span>,<span class="attr">"type"</span>:<span class="string">"insert"</span>,<span class="attr">"table"</span>:<span class="string">"aa"</span>,<span class="attr">"ts"</span>:<span class="number">1626346292</span>}</span><br><span class="line"></span><br><span class="line">{<span class="attr">"database"</span>:<span class="string">"gmall"</span>,<span class="attr">"xid"</span>:<span class="number">5520</span>,<span class="attr">"data"</span>:{<span class="attr">"id"</span>:<span class="string">"30"</span>,<span class="attr">"tm_name"</span>:<span class="string">"vivo"</span>,<span class="attr">"log_url"</span>:<span class="string">"https://item.jd.com/100009989503.html"</span>},<span class="attr">"commit"</span>:<span class="literal">true</span>,<span class="attr">"type"</span>:<span class="string">"insert"</span>,<span class="attr">"table"</span>:<span class="string">"bb"</span>,<span class="attr">"ts"</span>:<span class="number">1626346292</span>}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kafka:</span><br><span class="line"></span><br><span class="line">{<span class="attr">"database"</span>:<span class="string">"gmall"</span>,<span class="attr">"xid"</span>:<span class="number">305</span>,<span class="attr">"data"</span>:{<span class="attr">"tm_name"</span>:<span class="string">"vivo"</span>,<span class="attr">"log_url"</span>:<span class="string">"https://item.jd.com/100009989503.html"</span>,<span class="attr">"id"</span>:<span class="string">"31"</span>},<span class="attr">"commit"</span>:<span class="literal">true</span>,<span class="attr">"type"</span>:<span class="string">"insert"</span>,<span class="attr">"table"</span>:<span class="string">"cc"</span>,<span class="attr">"ts"</span>:<span class="number">1626346291</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717104914665.png" alt="MySQL配置信息"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717104938363.png" alt="idea显示结果"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717104956193.png" alt="消费Kafka中的数据"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210714162801543.png" alt="image-20210714162801543"></p>
+<h4 id="1、完整代码可以去看博客"><a href="#1、完整代码可以去看博客" class="headerlink" title="1、完整代码可以去看博客"></a>1、完整代码可以去看博客</h4><h4 id="2、查看结果"><a href="#2、查看结果" class="headerlink" title="2、查看结果"></a>2、查看结果</h4><p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717105120039.png" alt="hbase中的数据"></p>
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210717105314749.png" alt="kafka topic"></p>
+<h2 id="DWM"><a href="#DWM" class="headerlink" title="DWM"></a>DWM</h2><h3 id="1、Kafka精准一次性语义-注意事项"><a href="#1、Kafka精准一次性语义-注意事项" class="headerlink" title="1、Kafka精准一次性语义 注意事项"></a>1、Kafka精准一次性语义 注意事项</h3><p>DbBaseApp.java</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">这个如果打开这个状态后端和checkpoint测试的话</span></span><br><span class="line"></span><br><span class="line"><span class="meta">env.setStateBackend(new</span> <span class="string">FsStateBackend("hdfs://yaxin01:9820/flink-realtime-warehourse/dwd"));</span></span><br><span class="line"><span class="meta">env.enableCheckpointing(1000L,</span> <span class="string">CheckpointingMode.EXACTLY_ONCE);</span></span><br><span class="line"><span class="attr">env.getCheckpointConfig().setCheckpointTimeout(60000L);</span></span><br><span class="line"><span class="meta">env.setRestartStrategy(RestartStrategies.fixedDelayRestart(3,</span> <span class="string">Time.seconds(3)));</span></span><br><span class="line"><span class="attr">env.setRestartStrategy(RestartStrategies.noRestart());</span></span><br><span class="line"></span><br><span class="line"><span class="attr">缺少一个包，会报一个错，hdfs-schema找不到</span></span><br><span class="line"><span class="attr">&lt;!--如果保存检查点到hdfs上，需要引入此依赖--&gt;</span></span><br><span class="line"><span class="attr">&lt;dependency&gt;</span></span><br><span class="line">    <span class="attr">&lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;</span></span><br><span class="line">    <span class="attr">&lt;artifactId&gt;hadoop-client&lt;/artifactId&gt;</span></span><br><span class="line">    <span class="attr">&lt;version&gt;${hadoop.version}&lt;/version&gt;</span></span><br><span class="line"><span class="attr">&lt;/dependency&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">但是还是会报kafka的事务的超时时间太短了</span></span><br><span class="line"><span class="attr">数据源kafka，sink也是kafka，可以实现一个端到端的精准一次性，实现两阶段提交</span></span><br><span class="line"><span class="attr">到checkpoint真正完成提交去执行，然后才能真正的去执行，</span></span><br><span class="line"><span class="attr">在kafka中开启事务，这个事务也有自己的超时时间，这两个超时时间应该谁大一些</span></span><br><span class="line"><span class="attr">开启事务，预提交，来一条写一条</span></span><br><span class="line"><span class="attr">什么时候关闭，checkpoint完成,jobmanager通知才真正完成</span></span><br><span class="line"><span class="attr">checkpint</span> <span class="string">&gt; kafka 事务</span></span><br><span class="line"><span class="attr">如果checkpoint的时间大于kafka的事务的时间，kafka挂掉了，但是checkpoint成功了，事务失败了，回滚了，消费数据是从checkpoint之后开始消费，但是会数据丢失</span></span><br><span class="line"></span><br><span class="line"><span class="attr">checkpoint</span> <span class="string">&lt; kafka事务使劲啊</span></span><br><span class="line"><span class="meta">如果checkpoint失败了，事务回滚，没有问题，如果开启checkpoint，kafka</span> <span class="string">exactly once</span></span><br><span class="line"><span class="attr">这个时候要加一个参数</span></span><br><span class="line"><span class="attr">env.getCheckpointConfig().setCheckpointTimeout(60000L);</span></span><br><span class="line"></span><br><span class="line"><span class="attr">所以我们还得在flinkKafkaProducer中设置事务的时间</span></span><br><span class="line"><span class="attr">public</span> <span class="string">static &lt;T&gt; FlinkKafkaProducer&lt;T&gt; 							getKafkaSinkBySchema(KafkaSerializationSchema&lt;T&gt; kafkaSerializationSchema) {</span></span><br><span class="line">	<span class="meta">props.setProperty(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG,</span> <span class="string">5 * 60 * 1000L + "");</span></span><br><span class="line">	<span class="attr">return</span> <span class="string">new FlinkKafkaProducer&lt;T&gt;(DEFAULT_TOPIC, kafkaSerializationSchema, props, FlinkKafkaProducer.Semantic.EXACTLY_ONCE);</span></span><br><span class="line"><span class="attr">}</span></span><br><span class="line"></span><br><span class="line"><span class="meta">事务是根据checkpoint的结果来进行提交的,kafka</span> <span class="string">的事务时间要比kafka的 checkpoint的时间要大</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2、分层思路"><a href="#2、分层思路" class="headerlink" title="2、分层思路"></a>2、分层思路</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ODS</span> <span class="string">---&gt; DWD ---&gt; DWM ---&gt; DWS ---&gt; ADS</span></span><br><span class="line"><span class="attr">越靠近ADS，越是要看需求，去拆分表的时候，没有太多的去考虑需求</span></span><br><span class="line"></span><br><span class="line"><span class="attr">业务数据，我们在配置信息的时候是需要考虑业务逻辑的</span></span><br><span class="line"><span class="attr">ODS</span> <span class="string">DWD 如何考虑维度建模，不是考虑最后做什么需求去建立的</span></span><br><span class="line"><span class="attr">MySQL在做维度退化的时候，表会少一点，星型模型</span></span><br><span class="line"></span><br><span class="line"><span class="attr">商品信息sku，spu，trademark合并</span></span><br><span class="line"><span class="attr">维度退化，表少了</span></span><br><span class="line"><span class="attr">维度建模，确定维度，根据维度选择度量值，度量是最后的需求，DWD按照维度来进行建立的</span></span><br><span class="line"><span class="attr">字段，还是有关系的，关系性不是那么强的</span></span><br><span class="line"></span><br><span class="line"><span class="attr">DWM做一个预处理，减少业务的复杂性，DWS可能会复用DWM层的表</span></span><br><span class="line"></span><br><span class="line"><span class="attr">实现方式不一样，分层思路是一样的</span></span><br><span class="line"></span><br><span class="line"><span class="attr">需求：</span></span><br><span class="line">	<span class="attr">访客　　　－－－＞　可视化大屏</span></span><br><span class="line">	<span class="meta">商品　　　－－－＞　可视化大屏</span> <span class="string">---&gt; 多维分析 | 可视化大屏 </span></span><br><span class="line">	<span class="attr">地区　　　－－－＞　可视化大屏</span></span><br><span class="line">	<span class="attr">关键词　　－－－＞　可视化大屏</span></span><br><span class="line"></span><br><span class="line"><span class="attr">ADS</span> <span class="string">需求：</span></span><br><span class="line">	<span class="attr">有一些需求不一定是来自DWS，也有可能来自DWD层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">访客：</span></span><br><span class="line">	<span class="meta">PV：page_log</span> <span class="string">---&gt; dwd</span></span><br><span class="line">	<span class="meta">UV：page_log过滤去重</span> <span class="string">---&gt; dwm</span></span><br><span class="line">	<span class="meta">跳出率：page_log判定（离开平台）</span> <span class="string">---&gt; dwm</span></span><br><span class="line">	<span class="meta">进入页面数：识别开始访问</span> <span class="string">---&gt; dwd</span></span><br><span class="line">	<span class="meta">连续访问时长：page_log直接可求</span> <span class="string">---&gt; dwd</span></span><br><span class="line">	</span><br><span class="line"><span class="attr">商品：</span></span><br><span class="line">	<span class="attr">点赞、收藏、加购物车</span></span><br><span class="line">	<span class="meta">下单</span> <span class="string">---&gt; 可视化大屏 ---&gt; 订单宽表 ---&gt; dwm</span></span><br><span class="line">	</span><br><span class="line"><span class="attr">地区：</span></span><br><span class="line">	<span class="meta">下单</span> <span class="string">---&gt; 订单宽表  ---&gt; dwm</span></span><br><span class="line">	<span class="attr">订单宽表比支付宽表的话跟复杂</span></span><br><span class="line">	</span><br><span class="line"><span class="attr">关键词：</span></span><br><span class="line">	<span class="meta">搜索关键词</span>  <span class="string">---&gt; 页面访问日志、直接可求 ---&gt; dwd</span></span><br><span class="line">	<span class="meta">点击商品关键词</span> <span class="string">---&gt; 商品主题下单再次聚合 ---&gt; dws</span></span><br><span class="line">	<span class="meta">下单商品关键词</span> <span class="string">---&gt; 商品主题下单再次聚合 ---&gt; dws</span></span><br><span class="line">	</span><br><span class="line"><span class="attr">广告投放，手机APP付款的页面比较小</span></span><br><span class="line"><span class="attr">订单的跳出页面比较高，这个页面可能有问题，分析用户的付款率比较低，没有下单，支付，购物车</span></span><br><span class="line"><span class="attr">从那个页面跳出比较多，整个网页做的不好，用户详情页比较高，多多少少都有问题</span></span><br><span class="line"></span><br><span class="line"><span class="attr">营业额比较低</span></span><br><span class="line"><span class="attr">但是不知道细节，从销售渠道来进行分析，不同的定义，跳出率，引流和推广的跳出率</span></span><br><span class="line"><span class="attr">方式的不同，导致实现的方式不同，跳出数/总数</span></span><br><span class="line"><span class="attr">过滤的方式来求跳出数</span></span><br><span class="line"></span><br><span class="line"><span class="attr">中间层，并不是为了能够出指标，而是提供复用性</span></span><br><span class="line"></span><br><span class="line"><span class="attr">大屏看的都是地区名称，需要进行关联，订单宽表</span></span><br><span class="line"><span class="attr">DWM结合DWD在一次聚合得到一个聚合操作，Clickhouse可以按照SQL分析</span></span><br><span class="line"></span><br><span class="line"><span class="attr">业务计算：</span></span><br><span class="line">	<span class="attr">访问UV计算</span></span><br><span class="line">	<span class="attr">跳出明细计算</span></span><br><span class="line">	<span class="attr">订单宽表</span></span><br><span class="line">	<span class="attr">支付宽表</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3、访客UV计算"><a href="#3、访客UV计算" class="headerlink" title="3、访客UV计算"></a>3、访客UV计算</h3><h4 id="3-1-业务说明"><a href="#3-1-业务说明" class="headerlink" title="3.1 业务说明"></a>3.1 业务说明</h4><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">UV，独立访客数，对于实时计算中，即每日活跃用户，因为实时计算中的UV是指当日的访客数</span></span><br><span class="line"><span class="attr">那么如何从用户行为日志中识别当日的访客数</span></span><br><span class="line"><span class="attr">1、识别访客打开第一个页面就进入我们的应用</span></span><br><span class="line"><span class="attr">2、访客一天中多次进入应用，我们要在一天范围内进行去重</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="3-2-从kafka的dwd-page-log主题接收数据"><a href="#3-2-从kafka的dwd-page-log主题接收数据" class="headerlink" title="3.2 从kafka的dwd_page_log主题接收数据"></a>3.2 从kafka的dwd_page_log主题接收数据</h4><h4 id="3-3-核心代码过滤"><a href="#3-3-核心代码过滤" class="headerlink" title="3.3 核心代码过滤"></a>3.3 核心代码过滤</h4><h4 id="3-4-过滤后的UV写到Kafka的DWM层中"><a href="#3-4-过滤后的UV写到Kafka的DWM层中" class="headerlink" title="3.4 过滤后的UV写到Kafka的DWM层中"></a>3.4 过滤后的UV写到Kafka的DWM层中</h4><h4 id="3-5-测试"><a href="#3-5-测试" class="headerlink" title="3.5 测试"></a>3.5 测试</h4><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_8"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>},<span class="attr">"page"</span>:{<span class="attr">"page_id"</span>:<span class="string">"good_list"</span>,<span class="attr">"item"</span>:<span class="string">"联想"</span>,<span class="attr">"during_time"</span>:<span class="number">19041</span>,<span class="attr">"item_type"</span>:<span class="string">"keyword"</span>,<span class="attr">"last_page_id"</span>:<span class="string">""</span>},<span class="attr">"ts"</span>:<span class="number">1592180030885</span>}</span><br><span class="line"></span><br><span class="line">{<span class="attr">"common"</span>:{<span class="attr">"ar"</span>:<span class="string">"310000"</span>,<span class="attr">"uid"</span>:<span class="string">"177"</span>,<span class="attr">"os"</span>:<span class="string">"Android 10.0"</span>,<span class="attr">"ch"</span>:<span class="string">"xiaomi"</span>,<span class="attr">"md"</span>:<span class="string">"Xiaomi 10 Pro "</span>,<span class="attr">"mid"</span>:<span class="string">"mid_9"</span>,<span class="attr">"vc"</span>:<span class="string">"v2.1.134"</span>,<span class="attr">"ba"</span>:<span class="string">"Xiaomi"</span>},<span class="attr">"page"</span>:{<span class="attr">"page_id"</span>:<span class="string">"good_list"</span>,<span class="attr">"item"</span>:<span class="string">"联想"</span>,<span class="attr">"during_time"</span>:<span class="number">19041</span>,<span class="attr">"item_type"</span>:<span class="string">"keyword"</span>,<span class="attr">"last_page_id"</span>:<span class="string">""</span>},<span class="attr">"ts"</span>:<span class="number">1592183630</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/image-20210718084519474.png" alt="结果展示"></p>
+<h3 id="４、跳出明细计算"><a href="#４、跳出明细计算" class="headerlink" title="４、跳出明细计算"></a>４、跳出明细计算</h3><h3 id="５、订单宽表"><a href="#５、订单宽表" class="headerlink" title="５、订单宽表"></a>５、订单宽表</h3><h3 id="６、支付宽表"><a href="#６、支付宽表" class="headerlink" title="６、支付宽表"></a>６、支付宽表</h3>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">情深骚明</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/">http://example.com/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">情深骚明</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/flink/">
+                                    <span class="chip bg-color">flink</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/07/14/maxwell/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="maxwell">
+                        
+                        <span class="card-title">maxwell</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E4%BB%93/" class="post-category">
+                                    数仓
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E4%BB%93/">
+                        <span class="chip bg-color">数仓</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/12/Flink1-12%E5%86%85%E6%A0%B8%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Flink1.12内核源码解析">
+                        
+                        <span class="card-title">Flink1.12内核源码解析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/flink/" class="post-category">
+                                    flink
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/flink/">
+                        <span class="chip bg-color">flink</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="436514312"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='false'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">情深骚明</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wmyBigdata-1" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2647716549@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2647716549" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2647716549" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+
+    <div class="progress-bar"></div>
+          
+        <span id="busuanzi_container_site_pv" style='display:none'></span>
+            <i class="fa fa-heart-o"></i>
+            本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+
+    
+
+    
+        <span id="busuanzi_container_site_uv" style='display:none'></span>
+            人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+
+    
+
+    
+        <span id="busuanzi_container_site_pv" style='display:none'></span>
+        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+        <span id="busuanzi_value_page_pv" ></span>
+
+    
+
+    <span id="busuanzi_container_site_pv" style='display:none'></span>
+    <span id="busuanzi_container_site_uv" style='display:none'></span>
+</footer>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+
+</html>
