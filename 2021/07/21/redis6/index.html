@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hive-sql, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="redis6, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hive-sql | 情深骚明&amp;博客</title>
+    <title>redis6 | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hive-sql</h1>
+                    <h1 class="description center-align post-title">redis6</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hive/">
-                                <span class="chip bg-color">hive</span>
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hive/" class="post-category">
-                                hive
+                            <a href="/categories/redis/" class="post-category">
+                                redis
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-06-04
+                    2021-07-21
                 </div>
                 
 
@@ -480,11 +480,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="hive-sql"><a href="#hive-sql" class="headerlink" title="hive sql"></a>hive sql</h1><h2 id="函数类"><a href="#函数类" class="headerlink" title="函数类"></a>函数类</h2><h3 id="1、collect-list"><a href="#1、collect-list" class="headerlink" title="1、collect_list"></a>1、collect_list</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> username, collect_list(video_name) <span class="keyword">from</span> t_visit_video <span class="keyword">group</span> <span class="keyword">by</span> username ;</span><br><span class="line"></span><br><span class="line">王五	["机器人总动员","放牛班的春天","盗梦空间"]</span><br><span class="line">张三	["大唐双龙传","神探狄仁杰"]</span><br><span class="line">李四	["天下无贼","霸王别姬","霸王别姬"]</span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="redis6"><a href="#redis6" class="headerlink" title="redis6"></a>redis6</h1><h2 id="redis-单节点部署"><a href="#redis-单节点部署" class="headerlink" title="redis 单节点部署"></a>redis 单节点部署</h2><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">yum</span> <span class="string">-y install gcc</span></span><br><span class="line"><span class="attr">yum</span> <span class="string">-y install tcl</span></span><br><span class="line"></span><br><span class="line"><span class="attr">make</span> <span class="string"></span></span><br><span class="line"><span class="attr">执行这个需要执行两次</span></span><br><span class="line"><span class="attr">make</span> <span class="string">all</span></span><br><span class="line"></span><br><span class="line"><span class="attr">安装目录：</span></span><br><span class="line"><span class="attr">cd</span> <span class="string">/usr/local/bin</span></span><br><span class="line"><span class="attr">redis</span> <span class="string">得单独配置</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="2、collect-set"><a href="#2、collect-set" class="headerlink" title="2、collect_set"></a>2、collect_set</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">张三</span>	<span class="string">["大唐双龙传","神探狄仁杰"]</span></span><br><span class="line"><span class="meta">王五</span>	<span class="string">["机器人总动员","放牛班的春天","盗梦空间"]</span></span><br><span class="line"><span class="meta">李四</span>	<span class="string">["天下无贼","霸王别姬"]</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="redis-基本操作"><a href="#redis-基本操作" class="headerlink" title="redis 基本操作"></a>redis 基本操作</h2><h3 id="1、key键的操作"><a href="#1、key键的操作" class="headerlink" title="1、key键的操作"></a>1、key键的操作</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">keys</span> <span class="string">*查看当前库所有key    (匹配：keys *1)</span></span><br><span class="line"><span class="attr">exists</span> <span class="string">key判断某个key是否存在</span></span><br><span class="line"><span class="attr">type</span> <span class="string">key 查看你的key是什么类型</span></span><br><span class="line"></span><br><span class="line"><span class="attr">del</span> <span class="string">key       删除指定的key数据</span></span><br><span class="line"><span class="attr">unlink</span> <span class="string">key   根据value选择非阻塞删除,仅将keys从keyspace元数据中删除，真正的删除会在后续异步操作。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">测试效果是相同的，真正删除时异步操作的,unlink,内部并没有删除，是否时异步操作</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">expire</span> <span class="string">key 10   10秒钟：为给定的key设置过期时间</span></span><br><span class="line"><span class="attr">ttl</span> <span class="string">key 查看还有多少秒过期，-1表示永不过期，-2表示已过期</span></span><br><span class="line"></span><br><span class="line"><span class="attr">select命令切换数据库</span></span><br><span class="line"><span class="attr">dbsize查看当前数据库的key的数量</span></span><br><span class="line"><span class="attr">flushdb清空当前库</span></span><br><span class="line"><span class="attr">flushall通杀全部库</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="3、concat-ws"><a href="#3、concat-ws" class="headerlink" title="3、concat_ws"></a>3、concat_ws</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> e.deptno,concat_ws("|",collect_set(e.job)) jobs, <span class="built_in">max</span>(e.sal)</span><br><span class="line"><span class="keyword">from</span> emp e </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> e.deptno;</span><br><span class="line"></span><br><span class="line">e.deptno	jobs	_c2</span><br><span class="line"><span class="number">10</span>	MANAGER<span class="operator">|</span>PRESIDENT<span class="operator">|</span>CLERK	<span class="number">5000.0</span></span><br><span class="line"><span class="number">30</span>	SALESMAN<span class="operator">|</span>MANAGER<span class="operator">|</span>CLERK	<span class="number">2850.0</span></span><br><span class="line"><span class="number">20</span>	CLERK<span class="operator">|</span>MANAGER<span class="operator">|</span>ANALYST	<span class="number">3000.0</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2、Redis-字符串-String"><a href="#2、Redis-字符串-String" class="headerlink" title="2、Redis 字符串(String)"></a>2、Redis 字符串(String)</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">set</span>   <span class="string">&lt;key&gt;&lt;value&gt;添加键值对</span></span><br><span class="line"><span class="attr">set</span> <span class="string">key value [EX seconds|PX milliseconds|EXAT timestamp|PXAT milliseconds-timestamp|KEEPTTL] [NX|XX]</span></span><br><span class="line"></span><br><span class="line"><span class="attr">NX：当数据库中key不存在时，可以将key-value添加数据库</span></span><br><span class="line"><span class="attr">XX：当数据库中key存在时，可以将key-value添加数据库，与NX参数互斥</span></span><br><span class="line"><span class="attr">EX：key的超时秒数</span></span><br><span class="line"><span class="attr">PX：key的超时毫秒数，与EX互斥</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">get</span>   <span class="string">&lt;key&gt;查询对应键值</span></span><br><span class="line"><span class="attr">append</span>  <span class="string">&lt;key&gt;&lt;value&gt;将给定的&lt;value&gt; 追加到原值的末尾</span></span><br><span class="line"><span class="attr">strlen</span>  <span class="string">&lt;key&gt;获得值的长度</span></span><br><span class="line"><span class="attr">setnx</span>  <span class="string">&lt;key&gt;&lt;value&gt;只有在 key 不存在时    设置 key 的值</span></span><br><span class="line"></span><br><span class="line"><span class="attr">incr</span>  <span class="string">&lt;key&gt;</span></span><br><span class="line"><span class="meta">将</span> <span class="string">key 中储存的数字值增1</span></span><br><span class="line"><span class="attr">只能对数字值操作，如果为空，新增值为1</span></span><br><span class="line"><span class="attr">decr</span>  <span class="string">&lt;key&gt;</span></span><br><span class="line"><span class="meta">将</span> <span class="string">key 中储存的数字值减1</span></span><br><span class="line"><span class="attr">只能对数字值操作，如果为空，新增值为-1</span></span><br><span class="line"><span class="attr">incrby</span> <span class="string">/ decrby  &lt;key&gt;&lt;步长&gt;将 key 中储存的数字值增减。自定义步长。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">mset</span>  <span class="string">&lt;key1&gt;&lt;value1&gt;&lt;key2&gt;&lt;value2&gt;  ..... </span></span><br><span class="line"><span class="meta">同时设置一个或多个</span> <span class="string">key-value对  </span></span><br><span class="line"><span class="attr">mget</span>  <span class="string">&lt;key1&gt;&lt;key2&gt;&lt;key3&gt; .....</span></span><br><span class="line"><span class="meta">同时获取一个或多个</span> <span class="string">value  </span></span><br><span class="line"><span class="attr">msetnx</span> <span class="string">&lt;key1&gt;&lt;value1&gt;&lt;key2&gt;&lt;value2&gt;  ..... </span></span><br><span class="line"><span class="meta">同时设置一个或多个</span> <span class="string">key-value 对，当且仅当所有给定 key 都不存在。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">getrange</span>  <span class="string">&lt;key&gt;&lt;起始位置&gt;&lt;结束位置&gt;</span></span><br><span class="line"><span class="attr">获得值的范围，类似java中的substring，前包，后包</span></span><br><span class="line"><span class="attr">setrange</span>  <span class="string">&lt;key&gt;&lt;起始位置&gt;&lt;value&gt;</span></span><br><span class="line"><span class="meta">用</span> <span class="string">&lt;value&gt;  覆写&lt;key&gt;所储存的字符串值，从&lt;起始位置&gt;开始(索引从0开始)。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">setex</span>  <span class="string">&lt;key&gt;&lt;过期时间&gt;&lt;value&gt;</span></span><br><span class="line"><span class="attr">设置键值的同时，设置过期时间，单位秒。</span></span><br><span class="line"><span class="attr">getset</span> <span class="string">&lt;key&gt;&lt;value&gt;</span></span><br><span class="line"><span class="attr">以新换旧，设置了新值同时获得旧值。</span></span><br></pre></td></tr></tbody></table></figure>
 
 
                 
@@ -512,7 +512,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/04/hive-sql/">http://example.com/2021/06/04/hive-sql/</a>
+                    <a href="http://example.com/2021/07/21/redis6/">http://example.com/2021/07/21/redis6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,8 +550,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hive/">
-                                    <span class="chip bg-color">hive</span>
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
                                 </a>
                             
                         </div>
@@ -725,13 +725,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/06/04/Superset/">
+                <a href="/2021/07/23/java%E9%AB%98%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Superset">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="java高并发编程实战">
                         
-                        <span class="card-title">Superset</span>
+                        <span class="card-title">java高并发编程实战</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -742,57 +742,8 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-23
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/BI%E5%8F%AF%E8%A7%86%E5%8C%96/" class="post-category">
-                                    BI可视化
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/BI%E5%8F%AF%E8%A7%86%E5%8C%96/">
-                        <span class="chip bg-color">BI可视化</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/06/04/HashMap/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="HashMap">
-                        
-                        <span class="card-title">HashMap</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -810,6 +761,55 @@
                     
                     <a href="/tags/java/">
                         <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/18/Flink-CDC/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Flink-CDC">
+                        
+                        <span class="card-title">Flink-CDC</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/flink/" class="post-category">
+                                    flink
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/flink/">
+                        <span class="chip bg-color">flink</span>
                     </a>
                     
                 </div>
