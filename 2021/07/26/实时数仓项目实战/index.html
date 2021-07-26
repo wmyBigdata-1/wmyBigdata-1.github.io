@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="maxwell, HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>maxwell | 情深骚明&amp;博客</title>
+    <title>情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">maxwell</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-07-14
+                    2021-07-26
                 </div>
                 
 
@@ -480,12 +480,40 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数据同步"><a href="#数据同步" class="headerlink" title="数据同步"></a>数据同步</h1><h2 id="MaxWell"><a href="#MaxWell" class="headerlink" title="MaxWell"></a>MaxWell</h2><h3 id="1、Maxwell部署"><a href="#1、Maxwell部署" class="headerlink" title="1、Maxwell部署"></a>1、Maxwell部署</h3><h4 id="1-1-下载地址"><a href="#1-1-下载地址" class="headerlink" title="1.1 下载地址"></a>1.1 下载地址</h4><p><a target="_blank" rel="noopener" href="https://github.com/zendesk/maxwell/releases/download/v1.33.1/maxwell-1.33.1.tar.gz">Maxwell下载地址</a></p>
-<h3 id="1-2-安装"><a href="#1-2-安装" class="headerlink" title="1.2 安装"></a>1.2 安装</h3><p>***mysql ***</p>
-<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">log-bin</span>=<span class="string">mysql-bin #添加这一行就 ok   </span></span><br><span class="line"><span class="meta">binlog-format</span>=<span class="string">ROW #选择 row 模式    </span></span><br><span class="line"><span class="attr">server_id</span>=<span class="string">1       #配置 mysql replaction 需要定义，不能和canal的slaveId重复</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
+                <h1 id="实时数仓项目实战"><a href="#实时数仓项目实战" class="headerlink" title="实时数仓项目实战"></a>实时数仓项目实战</h1><h2 id="1、项目环境搭建"><a href="#1、项目环境搭建" class="headerlink" title="1、项目环境搭建"></a>1、项目环境搭建</h2><table>
+<thead>
+<tr>
+<th>groupid</th>
+<th>artifact</th>
+<th align="left">模块</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>com.wmy</td>
+<td>wmy_shop_parent</td>
+<td align="left">父工程</td>
+</tr>
+<tr>
+<td>com.wmy</td>
+<td>wmy_shop_common</td>
+<td align="left">公共模块</td>
+</tr>
+<tr>
+<td>com.wmy</td>
+<td>wmy_shop_canal_client</td>
+<td align="left">canal客户端采集模块</td>
+</tr>
+<tr>
+<td>com.wmy</td>
+<td>wmy_shop_realtime_etl</td>
+<td align="left">Flink实时计算模块</td>
+</tr>
+<tr>
+<td>com.wmy</td>
+<td>wmy_shop_data_simulator</td>
+<td align="left">数据模拟器模块</td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -512,7 +540,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/14/maxwell/">http://example.com/2021/07/14/maxwell/</a>
+                    <a href="http://example.com/2021/07/26/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">http://example.com/2021/07/26/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -721,17 +749,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/07/16/clickhouse%E5%85%A5%E9%97%A8/">
+                <a href="/2021/07/26/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="clickhouse入门">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">clickhouse入门</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,26 +770,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/clickhouse/" class="post-category">
-                                    clickhouse
+                            <a href="/categories/%E6%95%B0%E4%BB%93/" class="post-category">
+                                    数仓
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/clickhouse/">
-                        <span class="chip bg-color">clickhouse</span>
+                    <a href="/tags/%E6%95%B0%E4%BB%93/">
+                        <span class="chip bg-color">数仓</span>
                     </a>
                     
                 </div>
@@ -774,13 +804,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/13/flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/">
+                <a href="/2021/07/25/Canal%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="flink实时数仓">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Canal使用">
                         
-                        <span class="card-title">flink实时数仓</span>
+                        <span class="card-title">Canal使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -791,14 +821,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/flink/" class="post-category">
-                                    flink
+                            <a href="/categories/canal/" class="post-category">
+                                    canal
                                 </a>
                             
                             
@@ -808,8 +838,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/flink/">
-                        <span class="chip bg-color">flink</span>
+                    <a href="/tags/canal/">
+                        <span class="chip bg-color">canal</span>
                     </a>
                     
                 </div>
