@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML,CSS,JavaScript,JQuery,java,linux">
+    <meta name="keywords" content="redis和MySQL面试题, HTML,CSS,JavaScript,JQuery,java,linux">
     <meta name="description" content="本网址是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的嘘唏旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>情深骚明&amp;博客</title>
+    <title>redis和MySQL面试题 | 情深骚明&amp;博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">redis和MySQL面试题</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E4%BB%93/">
-                                <span class="chip bg-color">数仓</span>
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E4%BB%93/" class="post-category">
-                                数仓
+                            <a href="/categories/redis/" class="post-category">
+                                redis
                             </a>
                         
                     </div>
@@ -480,40 +480,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="实时数仓项目实战"><a href="#实时数仓项目实战" class="headerlink" title="实时数仓项目实战"></a>实时数仓项目实战</h1><h2 id="1、项目环境搭建"><a href="#1、项目环境搭建" class="headerlink" title="1、项目环境搭建"></a>1、项目环境搭建</h2><table>
-<thead>
-<tr>
-<th>groupid</th>
-<th>artifact</th>
-<th align="left">模块</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>com.wmy</td>
-<td>wmy_shop_parent</td>
-<td align="left">父工程</td>
-</tr>
-<tr>
-<td>com.wmy</td>
-<td>wmy_shop_common</td>
-<td align="left">公共模块</td>
-</tr>
-<tr>
-<td>com.wmy</td>
-<td>wmy_shop_canal_client</td>
-<td align="left">canal客户端采集模块</td>
-</tr>
-<tr>
-<td>com.wmy</td>
-<td>wmy_shop_realtime_etl</td>
-<td align="left">Flink实时计算模块</td>
-</tr>
-<tr>
-<td>com.wmy</td>
-<td>wmy_shop_data_simulator</td>
-<td align="left">数据模拟器模块</td>
-</tr>
-</tbody></table>
+                <h1 id="redis和MySQL面试题"><a href="#redis和MySQL面试题" class="headerlink" title="redis和MySQL面试题"></a>redis和MySQL面试题</h1><h2 id="Redis面试题"><a href="#Redis面试题" class="headerlink" title="Redis面试题"></a>Redis面试题</h2><h3 id="1、说一下你在项目中的Redis的应用场景？"><a href="#1、说一下你在项目中的Redis的应用场景？" class="headerlink" title="1、说一下你在项目中的Redis的应用场景？"></a>1、说一下你在项目中的Redis的应用场景？</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">五大数据类型：List、Set、String、Hash、Set</span></span><br><span class="line"><span class="attr">应用场景：</span></span><br><span class="line">	<span class="attr">1、基本就是缓存</span></span><br><span class="line">	<span class="meta">2、String</span> <span class="string">---&gt; token,session</span></span><br><span class="line">	<span class="attr">3、为的是服务无状态，延申思考，看项目中有那些数据结构或对象，在单机中需要单机锁，分布式需要分布式锁，可以抽取到redis中去</span></span><br><span class="line">	<span class="attr">项目当中：其实受很多影响，大厂的话，概念，无锁化，尽量不要去加锁，能用宽表用宽表，所用的操作都是串行，减少join关联的</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2、redis是单线程还是多线程？"><a href="#2、redis是单线程还是多线程？" class="headerlink" title="2、redis是单线程还是多线程？"></a>2、redis是单线程还是多线程？</h3><figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">1、无论什么版本，工作线程就是一个</span></span><br><span class="line"><span class="attr">2、6.X高版本出现了IO线程</span></span><br><span class="line"><span class="attr">3、去学习IO课程，你要真正的理解面向IO模型编程的时候，有内核的事情，从而内核把数据搬运到程序里这是第一步，然后搬运回来的数据做的计算是计算的第二步，netty</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>3、redis存在线程安全的问题？为什么？</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">如果事务提交失败了</span></span><br></pre></td></tr></tbody></table></figure>
+
 
                 
             </div>
@@ -540,7 +513,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/26/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">http://example.com/2021/07/26/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</a>
+                    <a href="http://example.com/2021/07/26/redis%E5%92%8CMySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">http://example.com/2021/07/26/redis%E5%92%8CMySQL%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -578,8 +551,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E4%BB%93/">
-                                    <span class="chip bg-color">数仓</span>
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
                                 </a>
                             
                         </div>
@@ -749,9 +722,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/07/26/redis%E5%92%8CMySQL%E9%9D%A2%E8%AF%95%E9%A2%98/">
                     <div class="card-image">
@@ -769,9 +743,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -784,6 +758,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -802,13 +777,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/25/Canal%E4%BD%BF%E7%94%A8/">
+                <a href="/2021/07/26/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Canal使用">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Canal使用</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -819,14 +794,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/canal/" class="post-category">
-                                    canal
+                            <a href="/categories/%E6%95%B0%E4%BB%93/" class="post-category">
+                                    数仓
                                 </a>
                             
                             
@@ -836,8 +811,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/canal/">
-                        <span class="chip bg-color">canal</span>
+                    <a href="/tags/%E6%95%B0%E4%BB%93/">
+                        <span class="chip bg-color">数仓</span>
                     </a>
                     
                 </div>
